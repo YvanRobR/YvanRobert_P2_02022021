@@ -1,57 +1,3 @@
-$couleur-primaire: #9356DC;
-$couleur-secondaire: #FF79DA;
-$couleur-tertiaire: #99E2D0;
-
-$police-blanche: white;
-$background-footer: #353535;
-$background-btn: $couleur-primaire;
-$fond-blanc: #ffffff;
-
-
-@mixin bord {
-    border: solid 1px black;
-}
-
-
-
-
-@mixin radius-cartes {
-    border-radius: 20px;
-}
-
-@mixin radius-images {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-@mixin flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-
-
-@mixin police-nouveau ($couleur-police-nouveau: $couleur-tertiaire) {
-    color: darken($couleur-police-nouveau, 50%)
-}
-
-@mixin test ($essai: $fond-blanc) {
-    background-color: darken($essai, 79.5%); /* c'est pas loin*/
-    
-}
-
-
-
-
-
-
 img {
     object-fit: cover;
 }
@@ -240,12 +186,3 @@ header {
     }
 }
 
-
-
-footer {
-    /*background-color: $background-footer;*/
-    @if (lightness($background-footer) < 50%) {
-        color: $police-blanche;
-    }
-    @include test;    /*presque ça */
-}

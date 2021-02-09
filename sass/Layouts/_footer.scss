@@ -1,0 +1,7 @@
+footer {
+    /*background-color: $background-footer;*/
+    @if (lightness($background-footer) < 50%) {
+        color: $police-blanche;
+    }
+    @include test;    /*presque ça */
+}

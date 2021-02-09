@@ -1,0 +1,24 @@
+img {
+    object-fit: cover;
+}
+
+
+
+*
+{
+	font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /*indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+
+}
+
+ul {
+    list-style-type: none;
+
+    h2 {
+        font-family: 'Shrikhand', sans-serif;
+    }
+}
+
+a {
+    text-decoration: none;
+}

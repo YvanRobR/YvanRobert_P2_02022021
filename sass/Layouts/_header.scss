@@ -1,0 +1,13 @@
+/* logo titre*/
+header {
+    text-align: center;
+
+    h1 {
+    font-family: 'Shrikhand', sans-serif;
+    }
+    
+    .localisation {
+        @include flex-row;
+        @include bord;
+    }
+}
