@@ -1,0 +1,19 @@
+{
+  "name": "yvanrobert_p3_02022021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YvanRobR/YvanRobert_P3_02022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YvanRobR/YvanRobert_P3_02022021/issues"
+  },
+  "homepage": "https://github.com/YvanRobR/YvanRobert_P3_02022021#readme"
+}

@@ -1,0 +1,251 @@
+$couleur-primaire: #9356DC;
+$couleur-secondaire: #FF79DA;
+$couleur-tertiaire: #99E2D0;
+
+$police-blanche: white;
+$background-footer: #353535;
+$background-btn: $couleur-primaire;
+$fond-blanc: #ffffff;
+
+
+@mixin bord {
+    border: solid 1px black;
+}
+
+
+
+
+@mixin radius-cartes {
+    border-radius: 20px;
+}
+
+@mixin radius-images {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+@mixin police-nouveau ($couleur-police-nouveau: $couleur-tertiaire) {
+    color: darken($couleur-police-nouveau, 50%)
+}
+
+@mixin test ($essai: $fond-blanc) {
+    background-color: darken($essai, 79.5%); /* c'est pas loin*/
+    
+}
+
+
+
+
+
+
+img {
+    object-fit: cover;
+}
+
+
+
+*
+{
+	font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /*indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+
+}
+
+ul {
+    list-style-type: none;
+
+    h2 {
+        font-family: 'Shrikhand', sans-serif;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/* logo titre*/
+header {
+    text-align: center;
+
+    h1 {
+    font-family: 'Shrikhand', sans-serif;
+    }
+    
+    .localisation {
+        @include flex-row;
+        @include bord;
+    }
+}
+
+
+.explore {
+
+
+    .btn-explorer {
+        background-color: $couleur-primaire;
+        
+            @if (lightness($background-btn) > 50%) {
+                color: $police-blanche;
+            }
+    }
+}
+
+
+
+
+
+/*partie fonctionnement*/
+
+
+
+.fonctionnement {
+    @include flex-column;
+    width: 100%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+    .btn-fonct {
+        @include flex-row;
+        /*@include bord;*/
+               
+
+        &__ordre {
+            background-color: $couleur-primaire;
+        
+            @if (lightness($background-btn) > 50%) {
+                color: $police-blanche;
+            }
+
+            @include bord;
+            height: 25px;
+            width: 25px;
+            align-self: center;
+            text-align: center;
+            padding: 2px 2px 2px 2px;
+        }
+
+        &__icone {
+            @include bord;
+            align-self: center;
+        }
+
+        &__texte {
+            @include bord;
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*cartes affichage restaurants*/
+
+
+.restaurants {
+    @include flex-column;
+    width: 100%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+    .resto {
+        @include flex-column;
+        @include radius-cartes;
+        box-shadow: 4px 4px 10px 1px rgb(229, 229, 229);
+        width: 100%;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        height: 30vh;
+
+        &__img {
+            @include radius-images;
+            height: 70%;
+            width: 100%;
+        }
+
+        &__nom {
+            margin-bottom: 2px;
+        }
+        
+        &__lieu {
+            margin-top: 2px;
+        }
+
+        &__favoris {
+            height: 20px;
+            width: 20px;
+            font-size: 20px;
+        }
+
+        
+
+        &__nouveau {
+            
+            background-color: $couleur-tertiaire;
+            text-align: center;
+            font-size: 14px;
+            padding-top: 2px;
+            @include police-nouveau;
+            height: 20px;
+            width: 100px;
+            border-radius: 1px;
+
+        }
+
+        &__nouveau--boite {
+            height: 50px;
+            width: 150px;
+            align-self: flex-end;
+            position: absolute;
+            padding-left: 25px;
+        }
+
+        .bas {
+            @include flex-row;
+            padding-right: 4vw;
+
+            &__gauche{
+                padding-left: 3vw;
+                width: 75vw;
+                @include flex-column;
+            }
+
+            &__droite {
+                align-self: center;
+            }
+        }
+        
+    }
+}
+
+
+
+footer {
+    /*background-color: $background-footer;*/
+    @if (lightness($background-footer) < 50%) {
+        color: $police-blanche;
+    }
+    @include test;    /*presque ça */
+}

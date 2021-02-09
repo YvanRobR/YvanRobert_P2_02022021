@@ -1,0 +1,147 @@
+@charset "UTF-8";
+img {
+  object-fit: cover;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  /*indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
+}
+
+ul {
+  list-style-type: none;
+}
+ul h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* logo titre*/
+header {
+  text-align: center;
+}
+header h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+header .localisation {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px black;
+}
+
+.explore .btn-explorer {
+  background-color: #9356DC;
+  color: white;
+}
+
+/*partie fonctionnement*/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+.fonctionnement .btn-fonct {
+  display: flex;
+  flex-direction: row;
+  /*@include bord;*/
+}
+.fonctionnement .btn-fonct__ordre {
+  background-color: #9356DC;
+  color: white;
+  border: solid 1px black;
+  height: 25px;
+  width: 25px;
+  align-self: center;
+  text-align: center;
+  padding: 2px 2px 2px 2px;
+}
+.fonctionnement .btn-fonct__icone {
+  border: solid 1px black;
+  align-self: center;
+}
+.fonctionnement .btn-fonct__texte {
+  border: solid 1px black;
+}
+
+/*cartes affichage restaurants*/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+.restaurants .resto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px 1px #e5e5e5;
+  width: 100%;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  height: 30vh;
+}
+.restaurants .resto__img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 70%;
+  width: 100%;
+}
+.restaurants .resto__nom {
+  margin-bottom: 2px;
+}
+.restaurants .resto__lieu {
+  margin-top: 2px;
+}
+.restaurants .resto__favoris {
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+}
+.restaurants .resto__nouveau {
+  background-color: #99E2D0;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 2px;
+  color: #1b6150;
+  height: 20px;
+  width: 100px;
+  border-radius: 1px;
+}
+.restaurants .resto__nouveau--boite {
+  height: 50px;
+  width: 150px;
+  align-self: flex-end;
+  position: absolute;
+  padding-left: 25px;
+}
+.restaurants .resto .bas {
+  display: flex;
+  flex-direction: row;
+  padding-right: 4vw;
+}
+.restaurants .resto .bas__gauche {
+  padding-left: 3vw;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .resto .bas__droite {
+  align-self: center;
+}
+
+footer {
+  /*background-color: $background-footer;*/
+  color: white;
+  background-color: #343434;
+  /* c'est pas loin*/
+  /*presque ça */
+}
+
+/*# sourceMappingURL=style.css.map */
