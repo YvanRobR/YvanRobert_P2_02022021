@@ -1,5 +1,6 @@
 footer {
     /*background-color: $background-footer;*/
+    width: 100%;
     @if (lightness($background-footer) < 50%) {
         color: $police-blanche;
     }

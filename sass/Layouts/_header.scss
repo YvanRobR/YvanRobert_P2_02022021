@@ -7,7 +7,18 @@ header {
     }
     
     .localisation {
+        justify-content: center;
         @include flex-row;
         @include bord;
+        
+        &__icone {
+            align-self: center;
+            @include bord;
+        }
+        &__lieu {
+            text-align: center;
+            
+            @include bord;
+        }
     }
 }
