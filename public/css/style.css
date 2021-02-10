@@ -45,6 +45,8 @@ footer ul h2 {
 .explore > p {
   font-size: 18px;
   font-weight: 300;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
 .explore .btn-explorer {
   text-align: center;
