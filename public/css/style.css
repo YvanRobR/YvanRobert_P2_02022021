@@ -12,8 +12,10 @@ a {
 * {
   box-sizing: border-box;
   /*indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur*/
-  margin-left: 0px;
-  margin-right: 0px;
+}
+
+body {
+  margin: 0 0 0 0;
 }
 
 * {
@@ -27,83 +29,170 @@ footer ul h2 {
   font-family: "Shrikhand", cursive;
 }
 
-/*boutons*/
-/* logo titre*/
-header {
-  text-align: center;
-}
-header h1 {
-  font-family: "Shrikhand", sans-serif;
-}
-header .localisation {
-  justify-content: center;
+.explore {
   display: flex;
-  flex-direction: row;
-  border: solid 1px black;
-}
-header .localisation__icone {
-  align-self: center;
-  border: solid 1px black;
-}
-header .localisation__lieu {
+  flex-direction: column;
+  background-color: #f4f4f4;
+  align-items: center;
   text-align: center;
-  border: solid 1px black;
+  padding-bottom: 50px;
 }
-
-footer {
-  /*background-color: $background-footer;*/
-  width: 100%;
-  color: white;
-  background-color: #343434;
-  /* c'est pas loin*/
-  /*presque ça */
+.explore h2 {
+  font-size: 24px;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
-
+.explore > p {
+  font-size: 18px;
+  font-weight: 300;
+}
 .explore .btn-explorer {
   text-align: center;
+  font-weight: bold;
+  justify-content: center;
   background-color: #9356DC;
+  background: #020024;
+  background: linear-gradient(0deg, #020024 0%, #9356dc 0%, #00d4ff 100%);
   color: white;
+  border-radius: 25px;
+  height: 50px;
+  width: 220px;
+  box-shadow: 1px 3px 10px 1px #cdcdcd;
 }
 
 /*partie fonctionnement*/
 .fonctionnement {
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
   width: 100%;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  padding-left: 8vw;
+  padding-right: 5vw;
+  padding-top: 20px;
+  padding-bottom: 45px;
 }
 .fonctionnement .btn-fonct {
   display: flex;
   flex-direction: row;
-  /*@include bord;*/
-  justify-content: center;
+  background-color: #f2f2f2;
+  box-shadow: 1px 3px 10px 1px #d9d9d9;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  height: 70px;
 }
 .fonctionnement .btn-fonct__ordre {
   background-color: #9356DC;
+  border-radius: 60px;
+  font-size: 14px;
+  font-weight: bold;
   color: white;
-  border: solid 1px black;
   height: 25px;
   width: 25px;
   align-self: center;
   text-align: center;
-  padding: 2px 2px 2px 2px;
+  padding: 5px 2px 2px 2px;
+  margin-right: 20px;
+  margin-left: -12px;
 }
 .fonctionnement .btn-fonct__icone {
-  border: solid 1px black;
   align-self: center;
+  color: gray;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  text-align: left;
+  padding-top: 2px;
+  margin-right: 15px;
 }
 .fonctionnement .btn-fonct__texte {
+  text-align: center;
+  font-weight: 500;
+  align-self: center;
+  font-size: 16px;
+}
+
+/* logo titre*/
+header {
+  text-align: center;
+}
+header h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 100;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  padding-bottom: 5px;
+  padding-top: 12px;
+  box-shadow: 1px 1px 10px 0px #9c9c9c;
+  /*@include bord;*/
+}
+header .localisation {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #e8e8e8;
+}
+header .localisation__icone {
+  align-self: center;
+  width: 25px;
+}
+header .localisation__lieu {
+  text-align: center;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+footer {
   border: solid 1px black;
+  background-color: #343434;
+  /*presque ça */
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  color: white;
+}
+footer a {
+  color: white;
+}
+footer else {
+  color: #000000;
+}
+footer else a {
+  color: #000000;
+}
+footer i {
+  height: 16px;
+  width: 16px;
+  font-size: 14px;
+  padding-top: 2px;
+  margin-right: 5px;
+  align-self: flex-start;
+}
+footer .ic {
+  font-size: 10px;
+}
+footer li {
+  display: flex;
+  font-size: 16px;
+  padding-bottom: 8px;
+  align-self: center;
+}
+footer h2 {
+  font-size: 18px;
+  font-weight: 100;
 }
 
 /*cartes affichage restaurants*/
 .restaurants {
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-left: 4vw;
   padding-right: 4vw;
+  padding-bottom: 7vh;
+  padding-top: 25px;
+  margin-bottom: 0px;
 }
 .restaurants .resto {
   display: flex;
@@ -113,7 +202,7 @@ footer {
   width: 100%;
   margin-top: 3vw;
   margin-bottom: 3vw;
-  height: 30vh;
+  height: 250px;
 }
 .restaurants .resto__img {
   border-top-left-radius: 20px;
@@ -123,23 +212,27 @@ footer {
 }
 .restaurants .resto__nom {
   margin-bottom: 2px;
+  font-size: 18px;
 }
 .restaurants .resto__lieu {
   margin-top: 2px;
+  font-size: 17px;
+  font-weight: 300;
 }
 .restaurants .resto__favoris {
-  height: 20px;
-  width: 20px;
-  font-size: 20px;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  font-weight: lighter;
 }
 .restaurants .resto__nouveau {
   background-color: #99E2D0;
   text-align: center;
   font-size: 14px;
-  padding-top: 2px;
+  padding-top: 8px;
   color: #1b6150;
-  height: 20px;
-  width: 100px;
+  height: 30px;
+  width: 90px;
   border-radius: 1px;
 }
 .restaurants .resto__nouveau--boite {
@@ -147,7 +240,7 @@ footer {
   width: 150px;
   align-self: flex-end;
   position: absolute;
-  padding-left: 25px;
+  padding-left: 48px;
 }
 .restaurants .resto .bas {
   display: flex;
@@ -156,12 +249,13 @@ footer {
 }
 .restaurants .resto .bas__gauche {
   padding-left: 3vw;
-  width: 75vw;
+  width: 79vw;
   display: flex;
   flex-direction: column;
 }
 .restaurants .resto .bas__droite {
-  align-self: center;
+  align-self: flex-start;
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,107 @@
+.explore {
+    @include flex-column;
+    @include bg-explore;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    
+    
+
+    h2 {
+        
+        font-size: 24px;
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+
+    >p {
+        
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+    .btn-explorer {
+        
+        text-align: center;
+        font-weight: bold;
+        
+        justify-content: center;
+        
+        background-color: $couleur-primaire;
+        @include gradient-btn;
+        
+            @if (lightness($background-btn) > 50%) {
+                color: $police-blanche;
+            }
+        border-radius: 25px;
+        height: 50px;
+        width: 220px;
+        @include box-shadow-btn-explorer
+
+    }
+}
+
+
+/*partie fonctionnement*/
+
+
+
+.fonctionnement {
+    
+    @include flex-column;
+    @include bg-fonctionnement;
+    width: 100%;
+    padding-left: 8vw;
+    padding-right: 5vw;
+    padding-top: 20px;
+    padding-bottom: 45px;
+
+    .btn-fonct {
+        @include flex-row;
+        @include bg-btn-fonct;
+        @include box-shadow-btn-fonct;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        height: 70px;
+       
+
+        &__ordre {
+            background-color: $couleur-primaire;
+            border-radius: 60px;
+            font-size: 14px;
+            font-weight: bold;
+
+            @if (lightness($background-btn) > 50%) {
+                color: $police-blanche;
+            }
+
+            
+            height: 25px;
+            width: 25px;
+            align-self: center;
+            text-align: center;
+            padding: 5px 2px 2px 2px;
+            margin-right: 20px;
+            margin-left: -12px;
+        }
+
+        &__icone {
+            
+            align-self: center;
+            color: gray;
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            text-align: left;
+            padding-top: 2px;
+            margin-right: 15px;
+        }
+
+        &__texte {
+            text-align: center;
+            font-weight: 500;
+            align-self: center;
+            font-size: 16px;
+        }
+    }
+}

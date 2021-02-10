@@ -1,8 +1,46 @@
 footer {
-    /*background-color: $background-footer;*/
+    
+    @include bord;
+    @include bg-footer;    /*presque ça */
     width: 100%;
-    @if (lightness($background-footer) < 50%) {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    
+    @if (lightness(map-get($background, footer)) < 50%) {
         color: $police-blanche;
+        a {
+            color: $police-blanche;
+        }
+    }else{
+        color: $police-noire;
+        a {
+            color: $police-noire;
+        }
     }
-    @include test;    /*presque ça */
+
+    i {
+        height: 16px;
+        width: 16px;
+        font-size: 14px;
+        padding-top: 2px;
+        margin-right: 5px;
+        align-self: flex-start;
+    }
+
+    .ic {
+        font-size: 10px;
+    }
+    
+    li {
+        display: flex;
+        font-size: 16px;
+        padding-bottom: 8px;
+        align-self: center;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 100;
+    }
+
 }

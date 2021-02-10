@@ -1,24 +1,35 @@
 /* logo titre*/
 header {
     text-align: center;
-
+   
     h1 {
     font-family: 'Shrikhand', sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    padding-top: 12px;
+    @include box-shadow-titre;
+    
+    /*@include bord;*/
     }
     
     .localisation {
         justify-content: center;
         @include flex-row;
-        @include bord;
+        @include bg-localisation;
+        
         
         &__icone {
             align-self: center;
-            @include bord;
+            width: 25px;
+        
         }
         &__lieu {
             text-align: center;
-            
-            @include bord;
+            margin-left: 10px;
+            font-size: 16px;
         }
     }
 }

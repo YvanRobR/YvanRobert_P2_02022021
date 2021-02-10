@@ -7,71 +7,19 @@
 @import "./Utils/mixins";
 @import "./Base/base";
 @import "./Base/typo";
-/*boutons*/
+@import "./Components/buttons";
 @import "./Layouts/header";
 @import "./Layouts/footer";
 
 
 
-.explore {
-
-    
-    .btn-explorer {
-        text-align: center;
-        background-color: $couleur-primaire;
-        
-            @if (lightness($background-btn) > 50%) {
-                color: $police-blanche;
-            }
-    }
-}
 
 
 
 
 
-/*partie fonctionnement*/
 
 
-
-.fonctionnement {
-    
-    @include flex-column;
-    width: 100%;
-    padding-left: 4vw;
-    padding-right: 4vw;
-
-    .btn-fonct {
-        @include flex-row;
-        /*@include bord;*/
-        justify-content: center;
-
-        &__ordre {
-            background-color: $couleur-primaire;
-        
-            @if (lightness($background-btn) > 50%) {
-                color: $police-blanche;
-            }
-
-            @include bord;
-            height: 25px;
-            width: 25px;
-            align-self: center;
-            text-align: center;
-            padding: 2px 2px 2px 2px;
-        }
-
-        &__icone {
-            @include bord;
-            align-self: center;
-        }
-
-        &__texte {
-            @include bord;
-            
-        }
-    }
-}
 
 
 
@@ -88,10 +36,14 @@
 
 
 .restaurants {
+    @include bg-restaurants;
     @include flex-column;
     width: 100%;
     padding-left: 4vw;
     padding-right: 4vw;
+    padding-bottom: 7vh;
+    padding-top: 25px;
+    margin-bottom: 0px;
 
     .resto {
         @include flex-column;
@@ -100,7 +52,7 @@
         width: 100%;
         margin-top: 3vw;
         margin-bottom: 3vw;
-        height: 30vh;
+        height: 250px;
 
         &__img {
             @include radius-images;
@@ -110,16 +62,20 @@
 
         &__nom {
             margin-bottom: 2px;
+            font-size: 18px;
         }
         
         &__lieu {
             margin-top: 2px;
+            font-size: 17px;
+            font-weight: 300;
         }
 
         &__favoris {
-            height: 20px;
-            width: 20px;
-            font-size: 20px;
+            height: 24px;
+            width: 24px;
+            font-size: 24px;
+            font-weight: lighter;
         }
 
         
@@ -129,10 +85,10 @@
             background-color: $couleur-tertiaire;
             text-align: center;
             font-size: 14px;
-            padding-top: 2px;
+            padding-top: 8px;
             @include police-nouveau;
-            height: 20px;
-            width: 100px;
+            height: 30px;
+            width: 90px;
             border-radius: 1px;
 
         }
@@ -142,7 +98,7 @@
             width: 150px;
             align-self: flex-end;
             position: absolute;
-            padding-left: 25px;
+            padding-left: 48px;
         }
 
         .bas {
@@ -151,12 +107,14 @@
 
             &__gauche{
                 padding-left: 3vw;
-                width: 75vw;
+                width: 79vw;
+                
                 @include flex-column;
             }
 
             &__droite {
-                align-self: center;
+                align-self: flex-start;
+                padding-top: 20px;
             }
         }
         

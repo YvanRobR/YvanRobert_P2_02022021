@@ -2,7 +2,41 @@ $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
 
-$police-blanche: white;
-$background-footer: #353535;
 $background-btn: $couleur-primaire;
+$shadow-dimension: 1px 3px 10px 1px;
+
+$police-blanche: white;
+$police-noire: #000000;
 $fond-blanc: #ffffff;
+$background: (
+
+    localisation: (
+        darken($fond-blanc, 9%)
+    ),
+
+    footer: (
+        darken($fond-blanc, 79.5%)
+    ),
+
+    restaurants: (
+        darken($fond-blanc, 5%)
+    ),
+
+    explore: (
+        darken($fond-blanc, 4.5%)
+    ),
+
+    fonctionnement: (
+        $fond-blanc
+    ),
+
+    btn-fonct: (
+        darken($fond-blanc, 5%)
+    )
+);
+
+
+$breakpoints: (
+    tablette: 768px,
+    desktop: 1024px
+);

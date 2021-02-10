@@ -2,9 +2,6 @@
     border: solid 1px black;
 }
 
-
-
-
 @mixin radius-cartes {
     border-radius: 20px;
 }
@@ -24,15 +21,52 @@
     flex-direction: row;
 }
 
-
-
+@mixin gradient-btn {
+background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(0,212,255,1) 100%);
+}
 
 
 @mixin police-nouveau ($couleur-police-nouveau: $couleur-tertiaire) {
     color: darken($couleur-police-nouveau, 50%)
 }
 
-@mixin test ($essai: $fond-blanc) {
-    background-color: darken($essai, 79.5%); /* c'est pas loin*/
-    
+
+@mixin bg-localisation {
+    background-color: map-get($background, localisation);
+}
+
+@mixin bg-footer {
+    background-color: map-get($background, footer);
+}
+
+@mixin bg-restaurants {
+    background-color: map-get($background, restaurants);
+}
+
+@mixin bg-explore {
+    background-color: map-get($background, explore);
+}
+
+@mixin bg-fonctionnement {
+    background-color: map-get($background, fonctionnement);
+}
+
+@mixin bg-btn-fonct {
+    background-color: map-get($background, btn-fonct);
+}
+
+
+
+
+@mixin box-shadow-btn-fonct ($ombre: map-get($background, fonctionnement)) {
+    box-shadow: $shadow-dimension darken($ombre, 15%);
+}
+
+@mixin box-shadow-btn-explorer ($ombre: map-get($background, explore)) {
+    box-shadow: $shadow-dimension darken($ombre, 15%);
+}
+
+@mixin box-shadow-titre ($ombre: map-get($background, localisation)) {
+    box-shadow: 1px 1px 10px 0px darken($ombre, 30%);
 }
