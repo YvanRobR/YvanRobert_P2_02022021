@@ -67,19 +67,24 @@
     margin-bottom: 0px;
 
     .resto {
-        @include bord;
+        
         @include flex-column;
         @include radius-cartes;
         box-shadow: 4px 4px 10px 1px rgb(229, 229, 229);
         width: 100%;
         margin-top: 3vw;
-        margin-bottom: 30vw;
-        height: 250px;
+        margin-bottom: 3vw;
+        height: 30vh;
+
+        a {
+            height: 70%;
+        }
 
         &__img {
             @include radius-images;
-            height: 70%;
+            height: 100%;
             width: 100%;
+            
         }
 
         &__nom {
@@ -112,24 +117,28 @@
             height: 30px;
             width: 90px;
             border-radius: 1px;
+            
 
         }
 
         &__nouveau--boite {
             height: 50px;
-            width: 150px;
+            width: 110px;
             align-self: flex-end;
             position: absolute;
-            padding-left: 48px;
+            padding-left: 10px;
+            
         }
 
         .bas {
             @include flex-row;
             padding-right: 4vw;
+            
 
             &__gauche{
                 padding-left: 3vw;
                 width: 79vw;
+                
                 
                 @include flex-column;
             }
@@ -137,6 +146,11 @@
             &__droite {
                 align-self: flex-start;
                 padding-top: 20px;
+                
+            }
+
+            .fa-heart:hover {
+                background-color: yellow;
             }
         }
         

@@ -8,6 +8,9 @@ img {
 a {
   text-decoration: none;
 }
+a :hover {
+  cursor: pointer;
+}
 
 * {
   box-sizing: border-box;
@@ -197,20 +200,22 @@ footer h2 {
   margin-bottom: 0px;
 }
 .restaurants .resto {
-  border: solid 1px black;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   box-shadow: 4px 4px 10px 1px #e5e5e5;
   width: 100%;
   margin-top: 3vw;
-  margin-bottom: 30vw;
-  height: 250px;
+  margin-bottom: 3vw;
+  height: 30vh;
+}
+.restaurants .resto a {
+  height: 70%;
 }
 .restaurants .resto__img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 70%;
+  height: 100%;
   width: 100%;
 }
 .restaurants .resto__nom {
@@ -240,10 +245,10 @@ footer h2 {
 }
 .restaurants .resto__nouveau--boite {
   height: 50px;
-  width: 150px;
+  width: 110px;
   align-self: flex-end;
   position: absolute;
-  padding-left: 48px;
+  padding-left: 10px;
 }
 .restaurants .resto .bas {
   display: flex;
@@ -259,6 +264,9 @@ footer h2 {
 .restaurants .resto .bas__droite {
   align-self: flex-start;
   padding-top: 20px;
+}
+.restaurants .resto .bas .fa-heart:hover {
+  background-color: yellow;
 }
 
 /*# sourceMappingURL=style.css.map */
