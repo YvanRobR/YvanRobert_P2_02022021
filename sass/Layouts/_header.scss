@@ -18,7 +18,7 @@ header {
     .localisation {
         justify-content: center;
         @include flex-row;
-        @include bg-localisation;
+        background-color: map-get($background, localisation);
         
         
         &__icone {

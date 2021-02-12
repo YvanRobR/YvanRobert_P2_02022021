@@ -12,11 +12,52 @@
 @import "./Layouts/footer";
 
 
+
+
+
+.explore {
+    @include flex-column;
+    background-color: map-get($background, explore);
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    
+    
+
+    h2 {
+        
+        font-size: 24px;
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+
+    >p {
+        
+        font-size: 18px;
+        font-weight: 300;
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+}
+
+
+
+.fonctionnement {
+    
+    @include flex-column;
+    background-color: map-get($background, fonctionnement);
+    width: 100%;
+    padding-left: 8vw;
+    padding-right: 5vw;
+    padding-top: 20px;
+    padding-bottom: 45px;
+}
+
 /*cartes affichage restaurants*/
 
-
 .restaurants {
-    @include bg-restaurants;
+    
+    background-color: map-get($background, restaurants);
     @include flex-column;
     width: 100%;
     padding-left: 4vw;
@@ -26,12 +67,13 @@
     margin-bottom: 0px;
 
     .resto {
+        @include bord;
         @include flex-column;
         @include radius-cartes;
         box-shadow: 4px 4px 10px 1px rgb(229, 229, 229);
         width: 100%;
         margin-top: 3vw;
-        margin-bottom: 3vw;
+        margin-bottom: 30vw;
         height: 250px;
 
         &__img {

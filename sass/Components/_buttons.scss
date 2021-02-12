@@ -1,66 +1,28 @@
-.explore {
-    @include flex-column;
-    @include bg-explore;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 50px;
-    
-    
 
-    h2 {
-        
-        font-size: 24px;
-        padding-left: 15vw;
-        padding-right: 15vw;
-    }
-
-    >p {
-        
-        font-size: 18px;
-        font-weight: 300;
-        padding-left: 15vw;
-        padding-right: 15vw;
-    }
     
-    .btn-explorer {
+    .btn-explorer {    
+    @include btn-generique-align;
+    @include btn-generique-size;
+    @include btn-generique-gradient;
+    
+        @if (lightness($btn-generique-background) > 50%) {
+            color: $police-blanche;
+        }
         
-        text-align: center;
-        font-weight: bold;
-        
-        justify-content: center;
-        
-        background-color: $couleur-primaire;
-        @include gradient-btn;
-        
-            @if (lightness($background-btn) > 50%) {
-                color: $police-blanche;
-            }
-        border-radius: 25px;
-        height: 50px;
-        width: 220px;
-        @include box-shadow-btn-explorer
-
-    }
+    @include box-shadow-btn-explorer
 }
+
 
 
 /*partie fonctionnement*/
 
 
 
-.fonctionnement {
-    
-    @include flex-column;
-    @include bg-fonctionnement;
-    width: 100%;
-    padding-left: 8vw;
-    padding-right: 5vw;
-    padding-top: 20px;
-    padding-bottom: 45px;
+
 
     .btn-fonct {
         @include flex-row;
-        @include bg-btn-fonct;
+        background-color: map-get($background, btn-fonct);
         @include box-shadow-btn-fonct;
         margin-bottom: 20px;
         border-radius: 20px;
@@ -73,7 +35,7 @@
             font-size: 14px;
             font-weight: bold;
 
-            @if (lightness($background-btn) > 50%) {
+            @if (lightness($btn-generique-background) > 50%) {
                 color: $police-blanche;
             }
 
@@ -106,4 +68,3 @@
             font-size: 16px;
         }
     }
-}
