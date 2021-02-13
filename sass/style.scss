@@ -157,3 +157,49 @@
     }
 }
 
+
+
+/* pages restaurants */
+
+section {
+    @include flex-column;
+}
+
+.plats {
+    @include radius-cartes;
+    @include flex-row;
+    @include bord;
+    height: 10vh;
+    margin-bottom: 2vh;
+
+    &__gauche {
+        /*@include flex-column;*/
+        @include bord;
+        /*justify-content: center;*/
+        width: 90%;
+        height: 10vh;
+
+        h3 {
+            
+            margin-bottom: 0px;
+        }
+
+        p {
+            
+            margin-top: 0px;
+            
+        }
+    }
+
+    &__droite {
+        
+        height: 10vh;
+        @include bord;
+
+        p {
+            @include bord;
+            
+        }
+    }
+
+}

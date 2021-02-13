@@ -269,4 +269,39 @@ footer h2 {
   background-color: yellow;
 }
 
+/* pages restaurants */
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.plats {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  border: solid 1px black;
+  height: 10vh;
+  margin-bottom: 2vh;
+}
+.plats__gauche {
+  /*@include flex-column;*/
+  border: solid 1px black;
+  /*justify-content: center;*/
+  width: 90%;
+  height: 10vh;
+}
+.plats__gauche h3 {
+  margin-bottom: 0px;
+}
+.plats__gauche p {
+  margin-top: 0px;
+}
+.plats__droite {
+  height: 10vh;
+  border: solid 1px black;
+}
+.plats__droite p {
+  border: solid 1px black;
+}
+
 /*# sourceMappingURL=style.css.map */
