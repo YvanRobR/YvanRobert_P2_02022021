@@ -12,6 +12,30 @@ footer {
 
         h2 {
             font-family: 'Shrikhand', cursive;
+            font-weight: lighter;
         }
+    }
+}
+
+.menu {
+    h1 {
+        @include police-shrikhand;
+        font-size: 30px;
+        font-weight: lighter;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
     }
 }

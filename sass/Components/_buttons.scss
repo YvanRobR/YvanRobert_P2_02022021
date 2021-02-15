@@ -12,7 +12,19 @@
     @include box-shadow-btn-explorer
 }
 
+.btn-commander {
+    align-self: center;
+    @include btn-generique-align;
+    @include btn-generique-size;
+    @include btn-generique-gradient;
+    
+        @if (lightness($btn-generique-background) > 50%) {
+            color: $police-blanche;
+        }
+        
+    @include box-shadow-btn-explorer
 
+}
 
 /*partie fonctionnement*/
 

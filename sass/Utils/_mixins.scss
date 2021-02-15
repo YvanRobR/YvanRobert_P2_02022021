@@ -2,6 +2,34 @@
     border: solid 1px black;
 }
 
+@mixin police-shrikhand {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin pos-logo-accueil {
+    font-family: 'Shrikhand', cursive;
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    padding-top: 12px;
+    width: 100%;
+}
+
+@mixin pos-logo-pages {
+    font-family: 'Shrikhand', cursive;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    padding-top: 12px;
+    width: 75%;
+    height: 60px;
+}
+
 @mixin radius-cartes {
     border-radius: 20px;
 }
@@ -21,8 +49,13 @@
     flex-direction: row;
 }
 
+@mixin flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 @mixin btn-generique-gradient {
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(231,113,218,1) 100%);
 }
 
 @mixin btn-generique-align {
@@ -54,6 +87,10 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba
 }
 
 @mixin box-shadow-btn-explorer ($ombre: map-get($background, explore)) {
+    box-shadow: $shadow-dimension darken($ombre, 15%);
+}
+
+@mixin box-shadow-plats ($ombre: map-get($background, restaurants)) {
     box-shadow: $shadow-dimension darken($ombre, 15%);
 }
 

@@ -30,6 +30,25 @@ footer ul {
 }
 footer ul h2 {
   font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+}
+
+.menu h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  font-weight: lighter;
+}
+.menu h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.menu h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.menu p {
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .btn-explorer {
@@ -39,16 +58,29 @@ footer ul h2 {
   border-radius: 25px;
   height: 50px;
   width: 220px;
-  background: linear-gradient(0deg, #020024 0%, #9356dc 0%, #00d4ff 100%);
+  background: linear-gradient(0deg, #9356dc 0%, #e771da 100%);
   color: white;
-  box-shadow: 1px 3px 10px 1px #cdcdcd;
+  box-shadow: 1px 3px 10px 1px #d0d0d0;
+}
+
+.btn-commander {
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+  border-radius: 25px;
+  height: 50px;
+  width: 220px;
+  background: linear-gradient(0deg, #9356dc 0%, #e771da 100%);
+  color: white;
+  box-shadow: 1px 3px 10px 1px #d0d0d0;
 }
 
 /*partie fonctionnement*/
 .btn-fonct {
   display: flex;
   flex-direction: row;
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   box-shadow: 1px 3px 10px 1px #d9d9d9;
   margin-bottom: 20px;
   border-radius: 20px;
@@ -88,23 +120,54 @@ footer ul h2 {
 /* logo titre*/
 header {
   text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
-header h1 {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
+header .logo-accueil {
+  font-family: "Shrikhand", cursive;
+  font-size: 32px;
   font-weight: 100;
   margin-bottom: 5px;
   margin-top: 0px;
   padding-bottom: 5px;
   padding-top: 12px;
-  box-shadow: 1px 1px 10px 0px #9c9c9c;
+  width: 100%;
+  box-shadow: 1px 1px 10px 0px #9e9e9e;
   /*@include bord;*/
+}
+header .logo-pages {
+  font-family: "Shrikhand", cursive;
+  font-size: 32px;
+  font-weight: 100;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  padding-bottom: 5px;
+  padding-top: 12px;
+  width: 75%;
+  height: 60px;
+}
+header nav {
+  width: 25%;
+  height: 60px;
+}
+header nav i {
+  display: flex;
+  font-size: 21px;
+  padding-top: 22px;
+  padding-right: 30px;
+  width: 100%;
+  height: 60px;
+  justify-content: flex-start;
 }
 header .localisation {
   justify-content: center;
   display: flex;
   flex-direction: row;
-  background-color: #e8e8e8;
+  background-color: #eaeaea;
+  width: 100%;
 }
 header .localisation__icone {
   align-self: center;
@@ -118,7 +181,7 @@ header .localisation__lieu {
 
 footer {
   border: solid 1px black;
-  background-color: #343434;
+  background-color: #353535;
   /*presque ça */
   width: 100%;
   padding-top: 0px;
@@ -159,7 +222,7 @@ footer h2 {
 .explore {
   display: flex;
   flex-direction: column;
-  background-color: #f4f4f4;
+  background-color: #f6f6f6;
   align-items: center;
   text-align: center;
   padding-bottom: 50px;
@@ -189,7 +252,7 @@ footer h2 {
 
 /*cartes affichage restaurants*/
 .restaurants {
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -270,38 +333,58 @@ footer h2 {
 }
 
 /* pages restaurants */
-section {
+.menu {
   display: flex;
   flex-direction: column;
+  margin-top: 0px;
+}
+
+.carte {
+  background-color: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 4vh;
+  margin-top: -48px;
+}
+.carte__haut {
+  display: flex;
+  flex-direction: row;
 }
 
 .plats {
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  border: solid 1px black;
-  height: 10vh;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  height: 8vh;
   margin-bottom: 2vh;
+  background-color: #ffffff;
+  box-shadow: 1px 3px 10px 1px #d0d0d0;
 }
 .plats__gauche {
   /*@include flex-column;*/
-  border: solid 1px black;
   /*justify-content: center;*/
   width: 90%;
   height: 10vh;
 }
 .plats__gauche h3 {
+  margin-top: 14px;
   margin-bottom: 0px;
 }
 .plats__gauche p {
-  margin-top: 0px;
+  margin-top: 5px;
 }
 .plats__droite {
-  height: 10vh;
-  border: solid 1px black;
+  height: 8vh;
 }
 .plats__droite p {
-  border: solid 1px black;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
