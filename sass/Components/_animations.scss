@@ -1,0 +1,44 @@
+@keyframes animation-plats {
+    0% {
+        
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    50% {
+        
+        transform: translateY(50%);
+        opacity: 0.5;
+    }
+
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+
+/* loader*/
+
+
+@keyframes animLoader {
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+@keyframes animItem {
+    0% {
+        transform: rotate(0deg);
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+

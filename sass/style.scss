@@ -8,6 +8,7 @@
 @import "./Base/base";
 @import "./Base/typo";
 @import "./Components/buttons";
+@import "./Components/animations";
 @import "./Layouts/header";
 @import "./Layouts/footer";
 
@@ -44,7 +45,7 @@
 
 .fonctionnement {
     
-    @include flex-column;
+    @include flex-row;
     background-color: map-get($background, fonctionnement);
     width: 100%;
     padding-left: 8vw;
@@ -191,49 +192,104 @@
 
 
 
+
+
+
+
+
+
 .plats {
-    @include radius-cartes;
-    @include flex-row;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
-    height: 8vh;
-    margin-bottom: 2vh;
-    background-color: $fond-blanc;
-    @include box-shadow-plats;
+    background-color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0.25rem 0.25rem 1rem #EAEAEA;
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+    animation: animation-plats 0.5s;
+    animation-timing-function: cubic-bezier(0,0,1,1) ;
+    animation-fill-mode: both;
+    transform: scale(0);
 
     &__gauche {
-        /*@include flex-column;*/
         
-        /*justify-content: center;*/
-        width: 90%;
-        height: 10vh;
+        flex: 1;
+    }
 
-        h3 {
-            margin-top: 14px;
-            margin-bottom: 0px;
-            
+    &__titre {
+        margin: 0rem;
+        
+    }
+
+    &__soustitre {
+        margin: 0rem;
+        
+    }
+
+    &__prix {
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 0.5rem;
+    }
+
+    &__box {
+        background-color: $couleur-tertiaire;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+    }
+
+    &__box--icone {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+    }
+
+    &:hover {
+        .plats__box {
+           margin-right: -1rem;
         }
 
-        p {
-            
-            margin-top: 5px;
-            
+        .plats__box--icone {
+            transform: rotate(360deg);
         }
     }
 
-    &__droite {
-        
-        height: 8vh;
-        
-        
-
-        p {
-            
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            font-weight: 600;
-        }
+    &__icone {
+        color: $couleur-tertiaire;
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -125,6 +125,35 @@ footer ul h2 {
   font-size: 16px;
 }
 
+@keyframes animation-plats {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+/* loader*/
+@keyframes animLoader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes animItem {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* logo titre*/
 header {
   text-align: center;
@@ -249,7 +278,7 @@ footer h2 {
 
 .fonctionnement {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #ffffff;
   width: 100%;
   padding-left: 8vw;
@@ -362,37 +391,64 @@ footer h2 {
 }
 
 .plats {
-  border-radius: 20px;
-  display: flex;
-  flex-direction: row;
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
-  height: 8vh;
-  margin-bottom: 2vh;
   background-color: #ffffff;
-  box-shadow: 1px 3px 10px 1px #d0d0d0;
+  padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0.25rem 0.25rem 1rem #EAEAEA;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 100%;
+  animation: animation-plats 0.5s;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  animation-fill-mode: both;
+  transform: scale(0);
 }
 .plats__gauche {
-  /*@include flex-column;*/
-  /*justify-content: center;*/
-  width: 90%;
-  height: 10vh;
+  flex: 1;
 }
-.plats__gauche h3 {
-  margin-top: 14px;
-  margin-bottom: 0px;
+.plats__titre {
+  margin: 0rem;
 }
-.plats__gauche p {
-  margin-top: 5px;
+.plats__soustitre {
+  margin: 0rem;
 }
-.plats__droite {
-  height: 8vh;
+.plats__prix {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
 }
-.plats__droite p {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  font-weight: 600;
+.plats__box {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.plats__box--icone {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.plats:hover .plats__box {
+  margin-right: -1rem;
+}
+.plats:hover .plats__box--icone {
+  transform: rotate(360deg);
+}
+.plats__icone {
+  color: #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */
