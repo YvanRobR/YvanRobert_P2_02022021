@@ -97,3 +97,56 @@
 @mixin box-shadow-titre ($ombre: map-get($background, localisation)) {
     box-shadow: 1px 1px 10px 0px darken($ombre, 30%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin explore-btn {
+    border: 0rem;
+    padding: 1rem 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 100px;
+    color: #ffffff;
+    background-color: $couleur-primaire;
+    box-shadow: 0.25rem 0.25rem 10px #9c9c9c;
+    height: 3rem;
+    width: 13.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@mixin btn-fav {
+    
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@mixin fav {
+        transition-duration: 1s;
+        position: absolute; /* superpose les 2 coeurs */
+
+        height: 50px;
+        width: 50px;
+        display: flex;
+        padding-top: 1rem;
+        justify-content: center;
+        mix-blend-mode: lighten;
+}

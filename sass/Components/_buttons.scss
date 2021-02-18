@@ -1,15 +1,15 @@
 
     
-    .btn-explorer {    
-    @include btn-generique-align;
-    @include btn-generique-size;
-    @include btn-generique-gradient;
+.explore {
     
-        @if (lightness($btn-generique-background) > 50%) {
-            color: $police-blanche;
-        }
+    &__btn {
+        @include explore-btn;
         
-    @include box-shadow-btn-explorer
+        &:hover {
+        background:linear-gradient(0deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+        cursor: pointer;
+        }
+    }
 }
 
 .btn-commander {
@@ -87,5 +87,100 @@
             font-weight: 500;
             align-self: center;
             font-size: 16px;
+        }
+    }
+
+
+    .resto {
+        &__btn--index {
+            @include btn-fav;
+            
+            background-color: black;
+            
+            font-size: 1.5rem;
+            height: 50px;
+            width: 50px;
+            .fa-heart {
+                
+                text-align: center;
+            }
+            
+            &:hover {
+                .resto__fav {
+                 &--transparent {
+                    opacity: 0;
+                    }
+             }
+            }
+    
+            &::before {
+                opacity: 0;
+                transition: 0.5s;
+                content: "";
+                
+                height: 100%;
+                width: 100%;
+                background:linear-gradient(360deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+                
+            }
+    
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+    
+        &__fav {
+            @include fav;
+            
+            background-color: $fond-blanc;
+            
+        }
+
+
+
+
+
+        &__btn--pages {
+            @include btn-fav;
+            
+            background-color: black;
+            
+            font-size: 1.5rem;
+            height: 50px;
+            width: 50px;
+            .fa-heart {
+                
+                text-align: center;
+            }
+            
+            &:hover {
+                .resto__fav {
+                 &--transparent {
+                    opacity: 0;
+                    }
+             }
+            }
+    
+            &::before {
+                opacity: 0;
+                transition: 0.5s;
+                content: "";
+                
+                height: 100%;
+                width: 100%;
+                background:linear-gradient(360deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+                
+            }
+    
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+    
+        &__fav {
+            @include fav;
+            
+            background-color: map-get($background, explore);
+            
         }
     }

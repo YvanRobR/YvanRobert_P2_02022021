@@ -21,7 +21,8 @@ $background: (
     ),
 
     restaurants: (
-        darken($fond-blanc, 3.6%)
+        $fond-blanc
+        /*darken($fond-blanc, 3.6%)*/
     ),
 
     explore: (

@@ -17,35 +17,39 @@
 
 
 .explore {
-    @include flex-column;
+    
     background-color: map-get($background, explore);
-    align-items: center;
+    
     text-align: center;
     padding-bottom: 50px;
     
     
 
-    h2 {
+    &__titre {
         
-        font-size: 24px;
-        padding-left: 15vw;
-        padding-right: 15vw;
+        margin: 0rem;
     }
 
-    >p {
+    &__soustitre {
         
-        font-size: 18px;
-        font-weight: 300;
-        padding-left: 15vw;
-        padding-right: 15vw;
+        font-weight: 400;
+        margin: 1rem 0rem;
+        padding-bottom: 1rem
     }
+
+    &__btn p {
+        font-size: 1rem;
+        margin-top: -2px;
+        font-weight: 500;
+    }
+    
 }
 
 
 
 .fonctionnement {
     
-    @include flex-row;
+    @include flex-column;
     background-color: map-get($background, fonctionnement);
     width: 100%;
     padding-left: 8vw;
@@ -88,23 +92,7 @@
             
         }
 
-        &__nom {
-            margin-bottom: 2px;
-            font-size: 18px;
-        }
-        
-        &__lieu {
-            margin-top: 2px;
-            font-size: 17px;
-            font-weight: 300;
-        }
 
-        &__favoris {
-            height: 24px;
-            width: 24px;
-            font-size: 24px;
-            font-weight: lighter;
-        }
 
         
 
@@ -112,12 +100,12 @@
             
             background-color: $couleur-tertiaire;
             text-align: center;
-            font-size: 14px;
+            font-size: 0.9rem;
             padding-top: 8px;
             @include police-nouveau;
             height: 30px;
             width: 90px;
-            border-radius: 1px;
+            border-radius: 2px;
             
 
         }
@@ -131,32 +119,98 @@
             
         }
 
-        .bas {
+        &__bas {
             @include flex-row;
-            padding-right: 4vw;
+            padding-right: 10px;
+            margin-top: 0.5rem;
+        }
+
+        &__description {
+            /*@include flex-row;*/
+            /*padding-right: 4vw;*/
             
-
-            &__gauche{
-                padding-left: 3vw;
-                width: 79vw;
-                
-                
-                @include flex-column;
-            }
-
-            &__droite {
-                align-self: flex-start;
-                padding-top: 20px;
-                
-            }
-
-            .fa-heart:hover {
-                background-color: yellow;
-            }
+            width: 100%;
+            padding-top: 0.5rem;
+            padding-left: 0.5rem;
         }
         
+        &__nom {
+            margin: 0rem 0rem 0.25rem 0rem;
+   
+        }
+
+        &__lieu {
+            margin: 0rem;
+        }
+        
+        
     }
+
+
+        
+        
+    
 }
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
