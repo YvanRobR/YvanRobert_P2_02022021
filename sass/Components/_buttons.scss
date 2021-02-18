@@ -13,17 +13,15 @@
 }
 
 .btn-commander {
-    align-self: center;
-    @include btn-generique-align;
-    @include btn-generique-size;
-    @include btn-generique-gradient;
+    @include explore-btn;
     
-        @if (lightness($btn-generique-background) > 50%) {
-            color: $police-blanche;
-        }
+    
         
-    @include box-shadow-btn-explorer
-
+        &:hover {
+        background:linear-gradient(0deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+        
+        cursor: pointer;
+        }
 }
 
 /*partie fonctionnement*/
@@ -106,7 +104,7 @@
             }
             
             &:hover {
-                .resto__fav {
+                .resto__fav--index {
                  &--transparent {
                     opacity: 0;
                     }
@@ -129,7 +127,7 @@
             }
         }
     
-        &__fav {
+        &__fav--index {
             @include fav;
             
             background-color: $fond-blanc;
@@ -142,7 +140,7 @@
 
         &__btn--pages {
             @include btn-fav;
-            
+            margin-top: 1rem;
             background-color: black;
             
             font-size: 1.5rem;

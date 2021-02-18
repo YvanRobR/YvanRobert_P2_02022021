@@ -37,11 +37,7 @@
         padding-bottom: 1rem
     }
 
-    &__btn p {
-        font-size: 1rem;
-        margin-top: -2px;
-        font-weight: 500;
-    }
+    
     
 }
 
@@ -238,7 +234,12 @@
     &__haut {
     
         @include flex-row;
+        padding-top: 5px;
+        padding-right: 12px;
 
+        h1 {
+            width: 100%;
+        }
     
     }
 
@@ -266,20 +267,21 @@
     animation-timing-function: cubic-bezier(0,0,1,1) ;
     animation-fill-mode: both;
     transform: scale(0);
+    
 
     &__gauche {
-        
+        @include texte-trop-grand;
         flex: 1;
     }
 
     &__titre {
         margin: 0rem;
-        
+        @include texte-trop-grand;
     }
 
     &__soustitre {
         margin: 0rem;
-        
+        @include texte-trop-grand;
     }
 
     &__prix {
@@ -330,7 +332,11 @@
 
 
 
-
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+      animation-delay:  #{$i/10}s;
+    }
+  }
 
 
 

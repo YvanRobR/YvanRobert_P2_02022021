@@ -56,8 +56,9 @@ footer ul h2 {
   padding: 1rem 1rem;
   font-weight: 400;
   font-size: 1rem;
+  text-align: center;
   border-radius: 100px;
-  color: #ffffff;
+  color: white;
   background-color: #9356DC;
   box-shadow: 0.25rem 0.25rem 10px #9c9c9c;
   height: 3rem;
@@ -65,22 +66,39 @@ footer ul h2 {
   margin-left: auto;
   margin-right: auto;
 }
+.explore__btn p {
+  font-size: 1rem;
+  margin-top: -2px;
+  font-weight: 500;
+}
 .explore__btn:hover {
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   cursor: pointer;
 }
 
 .btn-commander {
-  align-self: center;
+  border: 0rem;
+  padding: 1rem 1rem;
+  font-weight: 400;
+  font-size: 1rem;
   text-align: center;
-  font-weight: bold;
-  justify-content: center;
-  border-radius: 25px;
-  height: 50px;
-  width: 220px;
-  background: linear-gradient(0deg, #9356dc 0%, #e771da 100%);
+  border-radius: 100px;
   color: white;
-  box-shadow: 1px 3px 10px 1px #d0d0d0;
+  background-color: #9356DC;
+  box-shadow: 0.25rem 0.25rem 10px #9c9c9c;
+  height: 3rem;
+  width: 13.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-commander p {
+  font-size: 1rem;
+  margin-top: -2px;
+  font-weight: 500;
+}
+.btn-commander:hover {
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  cursor: pointer;
 }
 
 /*partie fonctionnement*/
@@ -148,7 +166,7 @@ footer ul h2 {
 .resto__btn--index .fa-heart {
   text-align: center;
 }
-.resto__btn--index:hover .resto__fav--transparent {
+.resto__btn--index:hover .resto__fav--index--transparent {
   opacity: 0;
 }
 .resto__btn--index::before {
@@ -162,7 +180,7 @@ footer ul h2 {
 .resto__btn--index:hover::before {
   opacity: 1;
 }
-.resto__fav {
+.resto__fav--index {
   transition-duration: 1s;
   position: absolute;
   /* superpose les 2 coeurs */
@@ -182,6 +200,7 @@ footer ul h2 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-top: 1rem;
   background-color: black;
   font-size: 1.5rem;
   height: 50px;
@@ -270,17 +289,20 @@ header .logo-pages {
   font-family: "Shrikhand", cursive;
   font-size: 32px;
   font-weight: 100;
-  text-align: left;
+  text-align: center;
   margin-bottom: 5px;
   margin-top: 0px;
   padding-bottom: 5px;
   padding-top: 12px;
   width: 75%;
   height: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 header nav {
-  width: 25%;
+  width: 2rem;
   height: 60px;
+  padding-left: 1rem;
 }
 header nav i {
   display: flex;
@@ -360,11 +382,6 @@ footer h2 {
   font-weight: 400;
   margin: 1rem 0rem;
   padding-bottom: 1rem;
-}
-.explore__btn p {
-  font-size: 1rem;
-  margin-top: -2px;
-  font-weight: 500;
 }
 
 .fonctionnement {
@@ -465,6 +482,11 @@ footer h2 {
 .carte__haut {
   display: flex;
   flex-direction: row;
+  padding-top: 5px;
+  padding-right: 12px;
+}
+.carte__haut h1 {
+  width: 100%;
 }
 
 .plats {
@@ -483,13 +505,22 @@ footer h2 {
   transform: scale(0);
 }
 .plats__gauche {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   flex: 1;
 }
 .plats__titre {
   margin: 0rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .plats__soustitre {
   margin: 0rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .plats__prix {
   font-weight: bold;
@@ -526,6 +557,42 @@ footer h2 {
 }
 .plats__icone {
   color: #99E2D0;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */

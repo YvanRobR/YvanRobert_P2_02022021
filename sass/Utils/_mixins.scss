@@ -21,7 +21,7 @@
     font-family: 'Shrikhand', cursive;
     font-size: 32px;
     font-weight: 100;
-    text-align: left;
+    text-align: center;
     margin-bottom: 5px;
     margin-top: 0px;
     padding-bottom: 5px;
@@ -117,14 +117,22 @@
     padding: 1rem 1rem;
     font-weight: 400;
     font-size: 1rem;
+    text-align: center;
     border-radius: 100px;
-    color: #ffffff;
+    @if (lightness($btn-generique-background) > 50%) {
+        color: $police-blanche;
+    }
     background-color: $couleur-primaire;
     box-shadow: 0.25rem 0.25rem 10px #9c9c9c;
     height: 3rem;
     width: 13.5rem;
     margin-left: auto;
     margin-right: auto;
+    & p {
+        font-size: 1rem;
+        margin-top: -2px;
+        font-weight: 500;
+    }
 }
 
 
@@ -149,4 +157,11 @@
         padding-top: 1rem;
         justify-content: center;
         mix-blend-mode: lighten;
+}
+
+
+@mixin texte-trop-grand {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

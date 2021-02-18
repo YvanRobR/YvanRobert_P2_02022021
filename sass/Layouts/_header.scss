@@ -15,13 +15,16 @@ header {
 
     .logo-pages {
         @include pos-logo-pages;
+        margin-left: auto;
+        margin-right: auto;
         
     }
 
     nav {
         
-        width: 25%;
+        width: 2rem;
         height: 60px;
+        padding-left: 1rem;
         
         i {
             
