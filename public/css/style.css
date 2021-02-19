@@ -190,7 +190,6 @@ footer ul h2 {
 }
 .resto__btn--index:hover::before {
   opacity: 1;
-  transform-origin: 50% 50%;
 }
 .resto__fav--index {
   transition-duration: 1s;
@@ -502,7 +501,7 @@ footer h2 {
   max-width: 100%;
   animation: animation-plats 0.5s;
   animation-timing-function: cubic-bezier(0, 0, 1, 1);
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
   /* forwards ou both? je ne vois pas de différence */
   transform: scale(0);
 }

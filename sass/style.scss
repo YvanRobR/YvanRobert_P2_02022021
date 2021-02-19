@@ -169,7 +169,7 @@
             max-width: 100%;
             animation: animation-plats 0.5s;
             animation-timing-function: cubic-bezier(0,0,1,1) ;
-            animation-fill-mode: both;                          /* forwards ou both? je ne vois pas de différence */
+            animation-fill-mode: forwards;                          /* forwards ou both? je ne vois pas de différence */
             transform: scale(0);
             
             &__gauche {
