@@ -110,9 +110,6 @@
         }
 
         &__description {
-            /*@include flex-row;*/
-            /*padding-right: 4vw;*/
-            
             width: 100%;
             padding-top: 0.5rem;
             padding-left: 0.5rem;
@@ -127,65 +124,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -231,10 +169,9 @@
             max-width: 100%;
             animation: animation-plats 0.5s;
             animation-timing-function: cubic-bezier(0,0,1,1) ;
-            animation-fill-mode: forwards;                          /* forwards ou both? je ne vois pas de différence */
+            animation-fill-mode: both;                          /* forwards ou both? je ne vois pas de différence */
             transform: scale(0);
             
-        
             &__gauche {
                 @include texte-trop-grand;
                 flex: 1;
@@ -294,33 +231,13 @@
                 color: $couleur-tertiaire;
             }
         }
+
+        @for $i from 0 to 9 {
+        .delay-#{$i} {
+          animation-delay:  #{$i/2}s;
+        }
+      }
     
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

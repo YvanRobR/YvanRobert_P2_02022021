@@ -270,42 +270,6 @@ footer ul h2 {
     opacity: 1;
   }
 }
-.delay-0 {
-  animation-delay: 0s;
-}
-
-.delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-3 {
-  animation-delay: 0.3s;
-}
-
-.delay-4 {
-  animation-delay: 0.4s;
-}
-
-.delay-5 {
-  animation-delay: 0.5s;
-}
-
-.delay-6 {
-  animation-delay: 0.6s;
-}
-
-.delay-7 {
-  animation-delay: 0.7s;
-}
-
-.delay-8 {
-  animation-delay: 0.8s;
-}
-
 /* logo titre*/
 header {
   text-align: center;
@@ -491,8 +455,6 @@ footer h2 {
   margin-top: 0.5rem;
 }
 .restaurants .resto__description {
-  /*@include flex-row;*/
-  /*padding-right: 4vw;*/
   width: 100%;
   padding-top: 0.5rem;
   padding-left: 0.5rem;
@@ -540,7 +502,7 @@ footer h2 {
   max-width: 100%;
   animation: animation-plats 0.5s;
   animation-timing-function: cubic-bezier(0, 0, 1, 1);
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   /* forwards ou both? je ne vois pas de différence */
   transform: scale(0);
 }
@@ -597,6 +559,33 @@ footer h2 {
 }
 .menu .carte .plats__icone {
   color: #99E2D0;
+}
+.menu .carte .delay-0 {
+  animation-delay: 0s;
+}
+.menu .carte .delay-1 {
+  animation-delay: 0.5s;
+}
+.menu .carte .delay-2 {
+  animation-delay: 1s;
+}
+.menu .carte .delay-3 {
+  animation-delay: 1.5s;
+}
+.menu .carte .delay-4 {
+  animation-delay: 2s;
+}
+.menu .carte .delay-5 {
+  animation-delay: 2.5s;
+}
+.menu .carte .delay-6 {
+  animation-delay: 3s;
+}
+.menu .carte .delay-7 {
+  animation-delay: 3.5s;
+}
+.menu .carte .delay-8 {
+  animation-delay: 4s;
 }
 
 /*# sourceMappingURL=style.css.map */
