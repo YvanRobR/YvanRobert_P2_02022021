@@ -1,7 +1,7 @@
 footer {
     
     @include bord;
-    background-color: map-get($background, footer);    /*presque ça */
+    background-color: map-get($background, footer);
     width: 100%;
     padding-top: 0px;
     padding-bottom: 10px;
@@ -42,5 +42,4 @@ footer {
         font-size: 18px;
         font-weight: 100;
     }
-
 }

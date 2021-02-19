@@ -14,37 +14,29 @@
 
 
 
-
+/* partie explorer*/
 
 .explore {
-    
     background-color: map-get($background, explore);
-    
     text-align: center;
     padding-bottom: 50px;
     
-    
-
     &__titre {
-        
-        margin: 0rem;
+    margin: 0rem;
     }
 
     &__soustitre {
-        
         font-weight: 400;
         margin: 1rem 0rem;
         padding-bottom: 1rem
     }
-
-    
-    
 }
 
 
+/* partie fonctionnement*/
+
 
 .fonctionnement {
-    
     @include flex-column;
     background-color: map-get($background, fonctionnement);
     width: 100%;
@@ -54,10 +46,13 @@
     padding-bottom: 45px;
 }
 
+
+
 /*cartes affichage restaurants*/
 
+
+
 .restaurants {
-    
     background-color: map-get($background, restaurants);
     @include flex-column;
     width: 100%;
@@ -85,12 +80,7 @@
             @include radius-images;
             height: 100%;
             width: 100%;
-            
         }
-
-
-
-        
 
         &__nouveau {
             
@@ -102,8 +92,6 @@
             height: 30px;
             width: 90px;
             border-radius: 2px;
-            
-
         }
 
         &__nouveau--boite {
@@ -132,20 +120,12 @@
         
         &__nom {
             margin: 0rem 0rem 0.25rem 0rem;
-   
         }
 
         &__lieu {
             margin: 0rem;
         }
-        
-        
     }
-
-
-        
-        
-    
 }
 
 
@@ -217,117 +197,112 @@
     @include flex-column;
     margin-top: 0px; 
     
+    .carte {
+        background-color: map-get($background, explore);
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        padding-bottom: 4vh;
+        margin-top: -48px;
+        
     
+        &__haut {
+        
+            @include flex-row;
+            padding-top: 5px;
+            padding-right: 12px;
     
-}
+            h1 {
+                width: 100%;
+            }
+        
+        }
 
-.carte {
-    background-color: map-get($background, explore);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-bottom: 4vh;
-    margin-top: -48px;
-    
-
-    &__haut {
-    
-        @include flex-row;
-        padding-top: 5px;
-        padding-right: 12px;
-
-        h1 {
-            width: 100%;
+        .plats {
+            background-color: #ffffff;
+            padding: 1rem;
+            display: flex;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            @include box-shadow-plats;
+            overflow: hidden;
+            cursor: pointer;
+            max-width: 100%;
+            animation: animation-plats 0.5s;
+            animation-timing-function: cubic-bezier(0,0,1,1) ;
+            animation-fill-mode: forwards;                          /* forwards ou both? je ne vois pas de différence */
+            transform: scale(0);
+            
+        
+            &__gauche {
+                @include texte-trop-grand;
+                flex: 1;
+            }
+        
+            &__titre {
+                margin: 0rem;
+                @include texte-trop-grand;
+            }
+        
+            &__soustitre {
+                margin: 0rem;
+                @include texte-trop-grand;
+            }
+        
+            &__prix {
+                font-weight: bold;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-left: 0.5rem;
+            }
+        
+            &__box {
+                background-color: $couleur-tertiaire;
+                margin: -1rem -5rem -1rem 1rem;
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-duration: 0.5s;
+            }
+        
+            &__box--icone {
+                height: 1.6rem;
+                width: 1.6rem;
+                background-color: white;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius: 100px;
+                transform: rotate(180deg);
+                transition-duration: 0.5s;
+            }
+        
+            &:hover {
+                .plats__box {
+                   margin-right: -1rem;
+                }
+        
+                .plats__box--icone {
+                    transform: rotate(360deg);
+                }
+            }
+        
+            &__icone {
+                color: $couleur-tertiaire;
+            }
         }
     
     }
-
-}
-
-
-
-
-
-
-
-
-
-.plats {
-    background-color: #ffffff;
-    padding: 1rem;
-    display: flex;
-    border-radius: 1rem;
-    margin-top: 1rem;
-    box-shadow: 0.25rem 0.25rem 1rem #EAEAEA;
-    overflow: hidden;
-    cursor: pointer;
-    max-width: 100%;
-    animation: animation-plats 0.5s;
-    animation-timing-function: cubic-bezier(0,0,1,1) ;
-    animation-fill-mode: both;
-    transform: scale(0);
     
-
-    &__gauche {
-        @include texte-trop-grand;
-        flex: 1;
-    }
-
-    &__titre {
-        margin: 0rem;
-        @include texte-trop-grand;
-    }
-
-    &__soustitre {
-        margin: 0rem;
-        @include texte-trop-grand;
-    }
-
-    &__prix {
-        font-weight: bold;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding-left: 0.5rem;
-    }
-
-    &__box {
-        background-color: $couleur-tertiaire;
-        margin: -1rem -5rem -1rem 1rem;
-        width: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition-duration: 0.5s;
-    }
-
-    &__box--icone {
-        height: 1.6rem;
-        width: 1.6rem;
-        background-color: white;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        border-radius: 100px;
-        transform: rotate(180deg);
-        transition-duration: 0.5s;
-    }
-
-    &:hover {
-        .plats__box {
-           margin-right: -1rem;
-        }
-
-        .plats__box--icone {
-            transform: rotate(360deg);
-        }
-    }
-
-    &__icone {
-        color: $couleur-tertiaire;
-    }
 }
+
+
+
+
+
 
 
 

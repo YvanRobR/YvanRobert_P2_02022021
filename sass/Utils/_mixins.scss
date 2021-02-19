@@ -2,6 +2,8 @@
     border: solid 1px black;
 }
 
+/* polices*/
+
 @mixin police-shrikhand {
     font-family: 'Shrikhand', cursive;
 }
@@ -30,6 +32,100 @@
     height: 60px;
 }
 
+
+@mixin texte-trop-grand {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin police-nouveau ($couleur-police-nouveau: $couleur-tertiaire) {
+    color: darken($couleur-police-nouveau, 50%)
+}
+
+
+
+/* box shadow */
+
+
+@mixin box-shadow-titre ($ombre: map-get($background, localisation)) {
+    box-shadow: 1px 1px 10px 0px darken($ombre, 30%);
+}
+
+@mixin box-shadow-btn-explorer ($ombre: map-get($background, explore)) {
+    box-shadow: $shadow-dimension darken($ombre, 15%);
+}
+
+@mixin box-shadow-btn-fonct ($ombre: map-get($background, fonctionnement)) {
+    box-shadow: $shadow-dimension darken($ombre, 15%);
+}
+
+@mixin box-shadow-plats ($ombre: map-get($background, restaurants)) {
+    box-shadow: $shadow-dimension-plats darken($ombre, 15%);
+}
+
+
+
+/* boutons */
+
+
+
+@mixin btn-gradient {
+    background:linear-gradient(0deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+}
+
+@mixin explore-btn {
+    border: 0rem;
+    padding: 1rem 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 100px;
+    @if (lightness($couleur-primaire) > 50%) {
+        color: $police-blanche;
+    }
+    background-color: $couleur-primaire;
+    @include box-shadow-btn-explorer;
+    height: 3rem;
+    width: 13.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    & p {
+        font-size: 1rem;
+        margin-top: -2px;
+        font-weight: 500;
+    }
+}
+
+@mixin btn-fav {
+    
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+@mixin fav {
+        transition-duration: 1s;
+        position: absolute; /* superpose les 2 coeurs */
+        height: 50px;
+        width: 50px;
+        display: flex;
+        padding-top: 1rem;
+        justify-content: center;
+        mix-blend-mode: lighten;
+}
+
+
+
+/* autres*/
+
+
+
 @mixin radius-cartes {
     border-radius: 20px;
 }
@@ -52,116 +148,4 @@
 @mixin flex-row-reverse {
     display: flex;
     flex-direction: row-reverse;
-}
-
-@mixin btn-generique-gradient {
-    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(231,113,218,1) 100%);
-}
-
-@mixin btn-generique-align {
-    
-    text-align: center;
-    font-weight: bold;
-    justify-content: center;;
-}
-
-@mixin btn-generique-size {
-    border-radius: 25px;
-    height: 50px;
-    width: 220px;    
-}
-
-@mixin police-nouveau ($couleur-police-nouveau: $couleur-tertiaire) {
-    color: darken($couleur-police-nouveau, 50%)
-}
-
-
-
-
-
-
-
-
-@mixin box-shadow-btn-fonct ($ombre: map-get($background, fonctionnement)) {
-    box-shadow: $shadow-dimension darken($ombre, 15%);
-}
-
-@mixin box-shadow-btn-explorer ($ombre: map-get($background, explore)) {
-    box-shadow: $shadow-dimension darken($ombre, 15%);
-}
-
-@mixin box-shadow-plats ($ombre: map-get($background, restaurants)) {
-    box-shadow: $shadow-dimension darken($ombre, 15%);
-}
-
-@mixin box-shadow-titre ($ombre: map-get($background, localisation)) {
-    box-shadow: 1px 1px 10px 0px darken($ombre, 30%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@mixin explore-btn {
-    border: 0rem;
-    padding: 1rem 1rem;
-    font-weight: 400;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 100px;
-    @if (lightness($btn-generique-background) > 50%) {
-        color: $police-blanche;
-    }
-    background-color: $couleur-primaire;
-    box-shadow: 0.25rem 0.25rem 10px #9c9c9c;
-    height: 3rem;
-    width: 13.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    & p {
-        font-size: 1rem;
-        margin-top: -2px;
-        font-weight: 500;
-    }
-}
-
-
-@mixin btn-fav {
-    
-    background-color: transparent;
-    border: transparent 0px solid;
-    padding: 0rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-@mixin fav {
-        transition-duration: 1s;
-        position: absolute; /* superpose les 2 coeurs */
-
-        height: 50px;
-        width: 50px;
-        display: flex;
-        padding-top: 1rem;
-        justify-content: center;
-        mix-blend-mode: lighten;
-}
-
-
-@mixin texte-trop-grand {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }

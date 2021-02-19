@@ -1,4 +1,5 @@
 /* logo titre*/
+
 header {
     text-align: center;
     @include flex-row-reverse;
@@ -7,27 +8,21 @@ header {
    
     .logo-accueil {
     @include pos-logo-accueil;
-    
     @include box-shadow-titre;
-    
-    /*@include bord;*/
     }
 
     .logo-pages {
         @include pos-logo-pages;
         margin-left: auto;
         margin-right: auto;
-        
     }
 
     nav {
-        
         width: 2rem;
         height: 60px;
         padding-left: 1rem;
         
         i {
-            
             display: flex;
             font-size: 21px;
             padding-top: 22px;
@@ -47,8 +42,8 @@ header {
         &__icone {
             align-self: center;
             width: 25px;
-        
         }
+
         &__lieu {
             text-align: center;
             margin-left: 10px;

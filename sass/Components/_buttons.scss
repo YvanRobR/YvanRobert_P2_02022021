@@ -1,4 +1,4 @@
-
+/* bouton explorer*/
     
 .explore {
     
@@ -6,11 +6,13 @@
         @include explore-btn;
         
         &:hover {
-        background:linear-gradient(0deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+        @include btn-gradient;
         cursor: pointer;
         }
     }
 }
+
+/* bouton commander */
 
 .btn-commander {
     @include explore-btn;
@@ -18,167 +20,165 @@
     
         
         &:hover {
-        background:linear-gradient(0deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+        @include btn-gradient;
         
         cursor: pointer;
         }
 }
 
+
+
+
+
 /*partie fonctionnement*/
 
 
+.btn-fonct {
+    @include flex-row;
+    background-color: map-get($background, btn-fonct);
+    @include box-shadow-btn-fonct;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 70px;
+    transition: all 250ms;
 
-
-
-    .btn-fonct {
-        @include flex-row;
-        background-color: map-get($background, btn-fonct);
-        @include box-shadow-btn-fonct;
-        margin-bottom: 20px;
-        border-radius: 20px;
-        height: 70px;
-        transition: all 250ms;
-
-        &:hover {
-            background-color: $background-hover-btn-fonct;
-            > .btn-fonct__icone {
-                color: $couleur-primaire;
-            }
+    &:hover {
+        background-color: $background-hover-btn-fonct;
+         
+        > .btn-fonct__icone {
+            color: $couleur-primaire;
         }
+    }
        
 
-        &__ordre {
-            background-color: $couleur-primaire;
-            border-radius: 60px;
-            font-size: 14px;
-            font-weight: bold;
+    &__ordre {
+        background-color: $couleur-primaire;
+        border-radius: 60px;
+        font-size: 14px;
+        font-weight: bold;
+        align-self: center;
+        text-align: center;
+        padding: 5px 2px 2px 2px;
+        margin-right: 20px;
+        margin-left: -12px;
+        height: 25px;
+        width: 25px;
 
-            @if (lightness($btn-generique-background) > 50%) {
-                color: $police-blanche;
-            }
-
-            
-            height: 25px;
-            width: 25px;
-            align-self: center;
-            text-align: center;
-            padding: 5px 2px 2px 2px;
-            margin-right: 20px;
-            margin-left: -12px;
+        @if (lightness($couleur-primaire) > 50%) {
+            color: $police-blanche;
         }
+ }
 
-        &__icone {
-            
-            align-self: center;
-            color: gray;
-            font-size: 20px;
-            height: 30px;
-            width: 30px;
-            text-align: left;
-            padding-top: 2px;
-            margin-right: 15px;
-            transition: all 250ms;
-        }
-
-        &__texte {
-            text-align: center;
-            font-weight: 500;
-            align-self: center;
-            font-size: 16px;
-        }
+    &__icone {            
+        align-self: center;
+        color: gray;
+        font-size: 20px;
+        height: 30px;
+        width: 30px;
+        text-align: left;
+        padding-top: 2px;
+        margin-right: 15px;
+        transition: all 250ms;
     }
 
+    &__texte {
+        text-align: center;
+        font-weight: 500;
+        align-self: center;
+        font-size: 16px;
+    }
+}
 
-    .resto {
-        &__btn--index {
-            @include btn-fav;
+
+
+
+
+
+/* coeurs favoris */
+
+/* coeur favoris page accueil*/
+
+.resto {
+    &__btn--index {
+        @include btn-fav;
             
-            background-color: black;
+        background-color: black;
+        font-size: 1.5rem;
+        height: 50px;
+		width: 50px;
+		
+		.fa-heart {
+            text-align: center;
+        }
             
-            font-size: 1.5rem;
-            height: 50px;
-            width: 50px;
-            .fa-heart {
-                
-                text-align: center;
-            }
-            
-            &:hover {
-                .resto__fav--index {
-                 &--transparent {
+        &:hover {
+            .resto__fav--index {
+            	&--transparent {
                     opacity: 0;
                     }
-             }
             }
+        }
     
-            &::before {
-                opacity: 0;
-                transition: 0.5s;
-                content: "";
-                
-                height: 100%;
-                width: 100%;
-                background:linear-gradient(360deg, $couleur-primaire 0%,$couleur-secondaire 100%);
-                
-            }
+        &::before {
+            opacity: 0;
+            transition: 0.5s;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background:linear-gradient(360deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+        	}
     
             &:hover::before {
                 opacity: 1;
+                transform-origin: 50% 50%;
             }
         }
     
-        &__fav--index {
-            @include fav;
-            
-            background-color: $fond-blanc;
-            
+    &__fav--index {
+        @include fav;
+        background-color: $fond-blanc;
+    }
+
+
+/* coeur favoris pages restos */
+
+
+    &__btn--pages {
+        @include btn-fav;
+        margin-top: 1rem;
+        background-color: black;
+        font-size: 1.5rem;
+        height: 50px;
+		width: 50px;
+		
+        .fa-heart {
+            text-align: center;
         }
-
-
-
-
-
-        &__btn--pages {
-            @include btn-fav;
-            margin-top: 1rem;
-            background-color: black;
             
-            font-size: 1.5rem;
-            height: 50px;
-            width: 50px;
-            .fa-heart {
-                
-                text-align: center;
-            }
-            
-            &:hover {
-                .resto__fav {
-                 &--transparent {
-                    opacity: 0;
-                    }
-             }
-            }
-    
-            &::before {
+        &:hover {
+            .resto__fav {
+                &--transparent {
                 opacity: 0;
-                transition: 0.5s;
-                content: "";
-                
-                height: 100%;
-                width: 100%;
-                background:linear-gradient(360deg, $couleur-primaire 0%,$couleur-secondaire 100%);
-                
-            }
-    
-            &:hover::before {
-                opacity: 1;
+                }
             }
         }
     
-        &__fav {
-            @include fav;
-            
-            background-color: map-get($background, explore);
-            
+        &::before {
+            opacity: 0;
+            transition: 0.5s;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background:linear-gradient(360deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+        }
+    
+        &:hover::before {
+            opacity: 1;
         }
     }
+    
+    &__fav {
+        @include fav;
+        background-color: map-get($background, explore);
+    }
+}

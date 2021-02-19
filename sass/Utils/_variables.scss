@@ -2,12 +2,12 @@ $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
 
-$btn-generique-background: $couleur-primaire;
-
-$shadow-dimension: 1px 3px 10px 1px;
+$shadow-dimension: 0.25rem 0.25rem 10px;
+$shadow-dimension-plats: 0.25rem 0.25rem 1rem;
 
 $police-blanche: white;
 $police-noire: #000000;
+
 $fond-blanc: #ffffff;
 $background-hover-btn-fonct: #f5edff;
 $background: (
