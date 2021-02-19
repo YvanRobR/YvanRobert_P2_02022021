@@ -241,15 +241,59 @@ footer ul h2 {
     transform: translateY(100%);
     opacity: 0;
   }
+  25% {
+    transform: translateY(75%);
+    opacity: 0.25;
+  }
   50% {
     transform: translateY(50%);
     opacity: 0.5;
+  }
+  75% {
+    transform: translateY(25%);
+    opacity: 0.75;
   }
   100% {
     transform: translateY(0%);
     opacity: 1;
   }
 }
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
 /* logo titre*/
 header {
   text-align: center;
@@ -490,22 +534,22 @@ footer h2 {
   transform: scale(0);
 }
 .plats__gauche {
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   flex: 1;
 }
 .plats__titre {
   margin: 0rem;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 .plats__soustitre {
   margin: 0rem;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 .plats__prix {
   font-weight: bold;
@@ -542,42 +586,6 @@ footer h2 {
 }
 .plats__icone {
   color: #99E2D0;
-}
-
-.delay-0 {
-  animation-delay: 0s;
-}
-
-.delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-3 {
-  animation-delay: 0.3s;
-}
-
-.delay-4 {
-  animation-delay: 0.4s;
-}
-
-.delay-5 {
-  animation-delay: 0.5s;
-}
-
-.delay-6 {
-  animation-delay: 0.6s;
-}
-
-.delay-7 {
-  animation-delay: 0.7s;
-}
-
-.delay-8 {
-  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */

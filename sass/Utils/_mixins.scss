@@ -161,7 +161,7 @@
 
 
 @mixin texte-trop-grand {
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
 }
