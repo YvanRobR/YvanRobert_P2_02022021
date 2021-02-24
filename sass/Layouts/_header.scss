@@ -38,6 +38,8 @@ header {
         @include flex-row;
         background-color: map-get($background, localisation);
         width: 100%;
+        height: 3rem;
+        @include bord;
         
         &__icone {
             align-self: center;
@@ -47,7 +49,7 @@ header {
         &__lieu {
             text-align: center;
             margin-left: 10px;
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 }

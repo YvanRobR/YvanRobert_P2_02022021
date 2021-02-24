@@ -64,9 +64,9 @@ footer ul h2 {
   text-align: center;
   border-radius: 100px;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0.25rem 0.25rem 10px #d0d0d0;
-  height: 3rem;
+  height: 3.1rem;
   width: 13.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -77,7 +77,8 @@ footer ul h2 {
   font-weight: 500;
 }
 .explore__btn:hover {
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0.25rem 0.25rem 10px #c3c3c3;
+  background: linear-gradient(0deg, #985ede, #ff83dd);
   cursor: pointer;
 }
 
@@ -90,9 +91,9 @@ footer ul h2 {
   text-align: center;
   border-radius: 100px;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0.25rem 0.25rem 10px #d0d0d0;
-  height: 3rem;
+  height: 3.1rem;
   width: 13.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -155,6 +156,17 @@ footer ul h2 {
   align-self: center;
   font-size: 16px;
 }
+@media (min-width: 768px) {
+  .btn-fonct {
+    align-self: center;
+    width: 40vw;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-fonct {
+    width: 25vw;
+  }
+}
 
 /* coeurs favoris */
 /* coeur favoris page accueil*/
@@ -164,15 +176,16 @@ footer ul h2 {
 .resto__btn--index {
   background-color: transparent;
   border: transparent 0px solid;
-  padding: 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   background-color: black;
   font-size: 1.5rem;
-  height: 50px;
-  width: 50px;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
 }
 .resto__btn--index .fa-heart {
   text-align: center;
@@ -192,13 +205,13 @@ footer ul h2 {
   opacity: 1;
 }
 .resto__fav--index {
-  transition-duration: 1s;
+  transition-duration: 0.2s;
   position: absolute;
   /* superpose les 2 coeurs */
-  height: 50px;
-  width: 50px;
+  height: 2rem;
+  width: 2rem;
   display: flex;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   justify-content: center;
   mix-blend-mode: lighten;
   background-color: #ffffff;
@@ -206,7 +219,6 @@ footer ul h2 {
 .resto__btn--pages {
   background-color: transparent;
   border: transparent 0px solid;
-  padding: 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,8 +226,8 @@ footer ul h2 {
   margin-top: 1rem;
   background-color: black;
   font-size: 1.5rem;
-  height: 50px;
-  width: 50px;
+  height: 2rem;
+  width: 2rem;
 }
 .resto__btn--pages .fa-heart {
   text-align: center;
@@ -235,13 +247,13 @@ footer ul h2 {
   opacity: 1;
 }
 .resto__fav {
-  transition-duration: 1s;
+  transition-duration: 0.2s;
   position: absolute;
   /* superpose les 2 coeurs */
-  height: 50px;
-  width: 50px;
+  height: 2rem;
+  width: 2rem;
   display: flex;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   justify-content: center;
   mix-blend-mode: lighten;
   background-color: #f6f6f6;
@@ -322,6 +334,8 @@ header .localisation {
   flex-direction: row;
   background-color: #eaeaea;
   width: 100%;
+  height: 3rem;
+  border: solid 1px black;
 }
 header .localisation__icone {
   align-self: center;
@@ -330,7 +344,7 @@ header .localisation__icone {
 header .localisation__lieu {
   text-align: center;
   margin-left: 10px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 footer {
@@ -379,10 +393,13 @@ footer h2 {
   padding-bottom: 50px;
 }
 .explore__titre {
-  margin: 0rem;
+  margin: 2.3rem 0rem 0rem 0rem;
+  padding: 0 3rem 0 3rem;
+  border: solid 1px black;
 }
 .explore__soustitre {
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 300;
   margin: 1rem 0rem;
   padding-bottom: 1rem;
 }
@@ -398,10 +415,40 @@ footer h2 {
   padding-top: 20px;
   padding-bottom: 45px;
 }
+@media (min-width: 768px) {
+  .fonctionnement {
+    padding-left: 4vw;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .fonctionnement h2 {
+    width: 100%;
+  }
+}
 
 /*cartes affichage restaurants*/
+@media (min-width: 1024px) {
+  .r1 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .r2 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .restaurants {
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -415,11 +462,13 @@ footer h2 {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
+  justify-content: space-between;
   box-shadow: 4px 4px 10px 1px #e5e5e5;
   width: 100%;
   margin-top: 3vw;
   margin-bottom: 3vw;
-  height: 30vh;
+  height: 27vh;
+  background-color: #ffffff;
 }
 .restaurants .resto a {
   height: 70%;
@@ -450,19 +499,29 @@ footer h2 {
 .restaurants .resto__bas {
   display: flex;
   flex-direction: row;
-  padding-right: 10px;
-  margin-top: 0.5rem;
+  /*padding-right: 10px;*/
+  margin-top: 0rem;
+  border: solid 1px black;
 }
 .restaurants .resto__description {
   width: 100%;
   padding-top: 0.5rem;
-  padding-left: 0.5rem;
+  padding-left: 0.8rem;
 }
 .restaurants .resto__nom {
   margin: 0rem 0rem 0.25rem 0rem;
 }
 .restaurants .resto__lieu {
   margin: 0rem;
+}
+@media (min-width: 1024px) {
+  .restaurants .resto {
+    width: 40vw;
+    justify-content: space-between;
+  }
+  .restaurants .resto__bas {
+    margin-bottom: 1rem;
+  }
 }
 
 /* pages restaurants */
@@ -495,7 +554,7 @@ footer h2 {
   display: flex;
   border-radius: 1rem;
   margin-top: 1rem;
-  box-shadow: 0.25rem 0.25rem 1rem #d9d9d9;
+  box-shadow: 0.25rem 0.25rem 1rem #d0d0d0;
   overflow: hidden;
   cursor: pointer;
   max-width: 100%;
@@ -563,28 +622,28 @@ footer h2 {
   animation-delay: 0s;
 }
 .menu .carte .delay-1 {
-  animation-delay: 0.5s;
+  animation-delay: 0.1s;
 }
 .menu .carte .delay-2 {
-  animation-delay: 1s;
+  animation-delay: 0.2s;
 }
 .menu .carte .delay-3 {
-  animation-delay: 1.5s;
+  animation-delay: 0.3s;
 }
 .menu .carte .delay-4 {
-  animation-delay: 2s;
+  animation-delay: 0.4s;
 }
 .menu .carte .delay-5 {
-  animation-delay: 2.5s;
+  animation-delay: 0.5s;
 }
 .menu .carte .delay-6 {
-  animation-delay: 3s;
+  animation-delay: 0.6s;
 }
 .menu .carte .delay-7 {
-  animation-delay: 3.5s;
+  animation-delay: 0.7s;
 }
 .menu .carte .delay-8 {
-  animation-delay: 4s;
+  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,13 +22,16 @@
     padding-bottom: 50px;
     
     &__titre {
-    margin: 0rem;
+    margin: 2.3rem 0rem 0rem 0rem;
+    padding: 0 3rem 0 3rem;
+    @include bord;
     }
 
     &__soustitre {
-        font-weight: 400;
+        font-size: 1.1rem;
+        font-weight: 300;
         margin: 1rem 0rem;
-        padding-bottom: 1rem
+        padding-bottom: 1rem;
     }
 }
 
@@ -44,13 +47,38 @@
     padding-right: 5vw;
     padding-top: 20px;
     padding-bottom: 45px;
+
+    @include tablette-only {
+        padding-left: 4vw;
+    }
+
+    @include desktop-only {
+        @include flex-row;
+        @include flex-wrap;
+        @include flex-space-between;
+        h2 {
+            width: 100%;
+        }
+    }
 }
 
 
 
 /*cartes affichage restaurants*/
 
+.r1 {
+    @include desktop-only {
+        @include flex-row;
+        
+    }
+}
 
+.r2 {
+    @include desktop-only {
+        @include flex-row;
+        
+    }
+}
 
 .restaurants {
     background-color: map-get($background, restaurants);
@@ -61,16 +89,22 @@
     padding-bottom: 7vh;
     padding-top: 25px;
     margin-bottom: 0px;
+    
+    
 
     .resto {
         
         @include flex-column;
         @include radius-cartes;
+        @include flex-space-between;
         box-shadow: 4px 4px 10px 1px rgb(229, 229, 229);
         width: 100%;
         margin-top: 3vw;
         margin-bottom: 3vw;
-        height: 30vh;
+        height: 27vh;
+        background-color: $fond-blanc;
+        
+        
 
         a {
             height: 70%;
@@ -105,14 +139,15 @@
 
         &__bas {
             @include flex-row;
-            padding-right: 10px;
-            margin-top: 0.5rem;
+            /*padding-right: 10px;*/
+            margin-top: 0rem;
+            @include bord;
         }
 
         &__description {
             width: 100%;
             padding-top: 0.5rem;
-            padding-left: 0.5rem;
+            padding-left: 0.8rem;
         }
         
         &__nom {
@@ -123,6 +158,20 @@
             margin: 0rem;
         }
     }
+
+    @include desktop-only {
+
+        .resto {
+            width: 40vw;
+            @include flex-space-between;
+
+        &__bas {
+            margin-bottom: 1rem;
+            
+        }
+    }
+    }
+
 }
 
 
@@ -234,7 +283,7 @@
 
         @for $i from 0 to 9 {
         .delay-#{$i} {
-          animation-delay:  #{$i/2}s;
+          animation-delay:  #{$i/10}s;
         }
       }
     

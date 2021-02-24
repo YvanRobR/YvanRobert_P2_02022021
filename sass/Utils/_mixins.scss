@@ -68,7 +68,10 @@
 
 /* boutons */
 
-
+@mixin hover-btn-explore ($ombre: map-get($background, explore)) {
+    box-shadow: $shadow-dimension darken($ombre, 20%);
+    background: linear-gradient(0deg, lighten($couleur-primaire, 2%),lighten($couleur-secondaire, 2%));
+}
 
 @mixin btn-gradient {
     background:linear-gradient(0deg, $couleur-primaire 0%,$couleur-secondaire 100%);
@@ -84,9 +87,9 @@
     @if (lightness($couleur-primaire) > 50%) {
         color: $police-blanche;
     }
-    background-color: $couleur-primaire;
+    @include btn-gradient;
     @include box-shadow-btn-explorer;
-    height: 3rem;
+    height: 3.1rem;
     width: 13.5rem;
     margin-left: auto;
     margin-right: auto;
@@ -101,7 +104,7 @@
     
     background-color: transparent;
     border: transparent 0px solid;
-    padding: 0rem;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,12 +113,12 @@
 }
 
 @mixin fav {
-        transition-duration: 1s;
+        transition-duration: 0.2s;
         position: absolute; /* superpose les 2 coeurs */
-        height: 50px;
-        width: 50px;
+        height: 2rem;
+        width: 2rem;
         display: flex;
-        padding-top: 1rem;
+        padding-top: 0.5rem;
         justify-content: center;
         mix-blend-mode: lighten;
 }
@@ -148,4 +151,32 @@
 @mixin flex-row-reverse {
     display: flex;
     flex-direction: row-reverse;
+}
+
+@mixin flex-wrap {
+    flex-wrap: wrap;    
+}
+
+@mixin flex-space-between {
+    justify-content: space-between;
+}
+
+@mixin flex-space-around {
+    justify-content: space-around;
+}
+
+
+
+
+@mixin tablette-only {
+    @media (min-width: map-get($breakpoints, tablette)) {
+        @content;
+    }    
+}
+
+@mixin desktop-only {
+    @media (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+    
 }
