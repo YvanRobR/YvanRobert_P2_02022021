@@ -2,6 +2,10 @@
     border: solid 1px black;
 }
 
+@mixin bord2 {
+    border: solid 1px white;
+}
+
 /* polices*/
 
 @mixin police-shrikhand {
@@ -43,7 +47,12 @@
     color: darken($couleur-police-nouveau, 50%)
 }
 
-
+@mixin barre-souligne {
+    height: 0.2rem;
+    width: 40px;
+    margin-top: 0.3rem;
+    background-color: $couleur-tertiaire;
+}
 
 /* box shadow */
 
@@ -74,7 +83,7 @@
 }
 
 @mixin btn-gradient {
-    background:linear-gradient(0deg, $couleur-primaire 0%,$couleur-secondaire 100%);
+    background:linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(231,113,218,1) 100%);
 }
 
 @mixin explore-btn {
@@ -90,7 +99,7 @@
     @include btn-gradient;
     @include box-shadow-btn-explorer;
     height: 3.1rem;
-    width: 13.5rem;
+    
     margin-left: auto;
     margin-right: auto;
     & p {

@@ -57,6 +57,7 @@ footer ul h2 {
 
 /* bouton explorer*/
 .explore__btn {
+  width: 13.5rem;
   border: 0rem;
   padding: 1rem 1rem;
   font-weight: 400;
@@ -64,10 +65,9 @@ footer ul h2 {
   text-align: center;
   border-radius: 100px;
   color: white;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(0deg, #9356dc 0%, #e771da 100%);
   box-shadow: 0.25rem 0.25rem 10px #d0d0d0;
   height: 3.1rem;
-  width: 13.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -84,6 +84,8 @@ footer ul h2 {
 
 /* bouton commander */
 .btn-commander {
+  margin-top: 3rem;
+  width: 12rem;
   border: 0rem;
   padding: 1rem 1rem;
   font-weight: 400;
@@ -91,10 +93,9 @@ footer ul h2 {
   text-align: center;
   border-radius: 100px;
   color: white;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(0deg, #9356dc 0%, #e771da 100%);
   box-shadow: 0.25rem 0.25rem 10px #d0d0d0;
   height: 3.1rem;
-  width: 13.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -104,7 +105,8 @@ footer ul h2 {
   font-weight: 500;
 }
 .btn-commander:hover {
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0.25rem 0.25rem 10px #c3c3c3;
+  background: linear-gradient(0deg, #985ede, #ff83dd);
   cursor: pointer;
 }
 
@@ -139,6 +141,16 @@ footer ul h2 {
   width: 25px;
   color: white;
 }
+@media (min-width: 768px) {
+  .btn-fonct__ordre {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-fonct__ordre {
+    margin-right: 20px;
+  }
+}
 .btn-fonct__icone {
   align-self: center;
   color: gray;
@@ -150,21 +162,42 @@ footer ul h2 {
   margin-right: 15px;
   transition: all 250ms;
 }
+@media (min-width: 768px) {
+  .btn-fonct__icone {
+    margin-right: 0.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-fonct__icone {
+    margin-right: 15px;
+  }
+}
 .btn-fonct__texte {
   text-align: center;
   font-weight: 500;
   align-self: center;
-  font-size: 16px;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .btn-fonct__texte {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-fonct__texte {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 @media (min-width: 768px) {
   .btn-fonct {
-    align-self: center;
-    width: 40vw;
+    width: 28.5vw;
   }
 }
 @media (min-width: 1024px) {
   .btn-fonct {
-    width: 25vw;
+    width: 26vw;
   }
 }
 
@@ -223,11 +256,12 @@ footer ul h2 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 1.7rem;
   background-color: black;
   font-size: 1.5rem;
-  height: 2rem;
-  width: 2rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  padding-bottom: 0.2rem;
 }
 .resto__btn--pages .fa-heart {
   text-align: center;
@@ -318,6 +352,7 @@ header nav {
   width: 2rem;
   height: 60px;
   padding-left: 1rem;
+  color: black;
 }
 header nav i {
   display: flex;
@@ -327,6 +362,7 @@ header nav i {
   width: 100%;
   height: 60px;
   justify-content: flex-start;
+  color: black;
 }
 header .localisation {
   justify-content: center;
@@ -335,7 +371,6 @@ header .localisation {
   background-color: #eaeaea;
   width: 100%;
   height: 3rem;
-  border: solid 1px black;
 }
 header .localisation__icone {
   align-self: center;
@@ -348,7 +383,6 @@ header .localisation__lieu {
 }
 
 footer {
-  border: solid 1px black;
   background-color: #353535;
   width: 100%;
   padding-top: 0px;
@@ -375,13 +409,17 @@ footer i {
 footer .fa-hands-helping {
   font-size: 10px;
 }
-footer li {
+footer ul {
+  padding-top: 0.5rem;
+  padding-left: 1.2rem;
+  margin-top: 0px;
+}
+footer ul li {
   display: flex;
   font-size: 16px;
   padding-bottom: 8px;
-  align-self: center;
 }
-footer h2 {
+footer ul h2 {
   font-size: 18px;
   font-weight: 100;
 }
@@ -390,12 +428,11 @@ footer h2 {
 .explore {
   background-color: #f6f6f6;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 4rem;
 }
 .explore__titre {
-  margin: 2.3rem 0rem 0rem 0rem;
-  padding: 0 3rem 0 3rem;
-  border: solid 1px black;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 2.3rem 3rem 0 3rem;
 }
 .explore__soustitre {
   font-size: 1.1rem;
@@ -417,7 +454,14 @@ footer h2 {
 }
 @media (min-width: 768px) {
   .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-left: 4vw;
+  }
+  .fonctionnement h2 {
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
@@ -437,6 +481,7 @@ footer h2 {
   .r1 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -444,6 +489,7 @@ footer h2 {
   .r2 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -454,9 +500,9 @@ footer h2 {
   width: 100%;
   padding-left: 4vw;
   padding-right: 4vw;
-  padding-bottom: 7vh;
+  padding-bottom: 3.2rem;
   padding-top: 25px;
-  margin-bottom: 0px;
+  margin-bottom: 0rem;
 }
 .restaurants .resto {
   display: flex;
@@ -469,6 +515,11 @@ footer h2 {
   margin-bottom: 3vw;
   height: 27vh;
   background-color: #ffffff;
+}
+@media (min-width: 1024px) {
+  .restaurants .resto {
+    width: 43vw;
+  }
 }
 .restaurants .resto a {
   height: 70%;
@@ -501,7 +552,12 @@ footer h2 {
   flex-direction: row;
   /*padding-right: 10px;*/
   margin-top: 0rem;
-  border: solid 1px black;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .restaurants .resto__bas {
+    margin-bottom: 1rem;
+  }
 }
 .restaurants .resto__description {
   width: 100%;
@@ -509,19 +565,14 @@ footer h2 {
   padding-left: 0.8rem;
 }
 .restaurants .resto__nom {
+  font-size: 1.1rem;
+  padding: 0rem;
   margin: 0rem 0rem 0.25rem 0rem;
 }
 .restaurants .resto__lieu {
+  font-size: 1rem;
+  font-weight: 300;
   margin: 0rem;
-}
-@media (min-width: 1024px) {
-  .restaurants .resto {
-    width: 40vw;
-    justify-content: space-between;
-  }
-  .restaurants .resto__bas {
-    margin-bottom: 1rem;
-  }
 }
 
 /* pages restaurants */
@@ -530,27 +581,83 @@ footer h2 {
   flex-direction: column;
   margin-top: 0px;
 }
+.menu h2 {
+  margin-left: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .menu .resto__img {
+    height: 50vh;
+  }
+}
 .menu .carte {
   background-color: #f6f6f6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding-left: 4vw;
-  padding-right: 4vw;
-  padding-bottom: 4vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 10vh;
   margin-top: -48px;
+}
+@media (min-width: 1024px) {
+  .menu .carte {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .menu .carte .carte__haut {
+    width: 100%;
+  }
 }
 .menu .carte__haut {
   display: flex;
   flex-direction: row;
-  padding-top: 5px;
+  padding-top: 0.5rem;
   padding-right: 12px;
+  /*margin-right: 5rem;*/
 }
 .menu .carte__haut h1 {
   width: 100%;
+  font-size: 1.8rem;
+  margin-left: 0.6rem;
+}
+.menu .carte__entrees .souligne {
+  height: 0.2rem;
+  width: 40px;
+  margin-top: 0.3rem;
+  background-color: #99E2D0;
+}
+.menu .carte__plats {
+  margin-top: 2.5rem;
+}
+.menu .carte__plats .souligne {
+  height: 0.2rem;
+  width: 40px;
+  margin-top: 0.3rem;
+  background-color: #99E2D0;
+}
+@media (min-width: 1024px) {
+  .menu .carte__plats {
+    margin-top: 0rem;
+  }
+}
+.menu .carte__desserts {
+  margin-top: 2.5rem;
+}
+.menu .carte__desserts .souligne {
+  height: 0.2rem;
+  width: 40px;
+  margin-top: 0.3rem;
+  background-color: #99E2D0;
+}
+@media (min-width: 1024px) {
+  .menu .carte__desserts {
+    margin-top: 0rem;
+  }
 }
 .menu .carte .plats {
   background-color: #ffffff;
-  padding: 1rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
   display: flex;
   border-radius: 1rem;
   margin-top: 1rem;
@@ -564,6 +671,11 @@ footer h2 {
   /* forwards ou both? je ne vois pas de différence */
   transform: scale(0);
 }
+@media (min-width: 1024px) {
+  .menu .carte .plats {
+    width: 30vw;
+  }
+}
 .menu .carte .plats__gauche {
   overflow: hidden;
   white-space: nowrap;
@@ -571,18 +683,21 @@ footer h2 {
   flex: 1;
 }
 .menu .carte .plats__titre {
+  font-size: 1.1rem;
   margin: 0rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu .carte .plats__soustitre {
-  margin: 0rem;
+  margin: 0.3rem 0 0 0;
+  font-size: 0.9rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu .carte .plats__prix {
+  font-size: 0.9rem;
   font-weight: bold;
   display: flex;
   justify-content: flex-end;

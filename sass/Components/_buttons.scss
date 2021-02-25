@@ -3,6 +3,7 @@
 .explore {
     
     &__btn {
+        width: 13.5rem;
         @include explore-btn;
         
         &:hover {
@@ -15,12 +16,14 @@
 /* bouton commander */
 
 .btn-commander {
+    margin-top: 3rem;
+    width: 12rem;
     @include explore-btn;
     
     
         
         &:hover {
-        @include btn-gradient;
+        @include hover-btn-explore;
         
         cursor: pointer;
         }
@@ -67,6 +70,14 @@
         @if (lightness($couleur-primaire) > 50%) {
             color: $police-blanche;
         }
+
+        @include tablette-only {
+            margin-right: 10px;
+        }
+
+        @include desktop-only {
+            margin-right: 20px;
+        }
  }
 
     &__icone {            
@@ -79,22 +90,40 @@
         padding-top: 2px;
         margin-right: 15px;
         transition: all 250ms;
+
+        @include tablette-only {
+            margin-right: 0.1rem;
+        }
+
+        @include desktop-only {
+            margin-right: 15px;
+        }
     }
 
     &__texte {
         text-align: center;
         font-weight: 500;
         align-self: center;
-        font-size: 16px;
+        font-size: 1rem;
+
+        @include tablette-only {
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        @include desktop-only {
+            font-size: 1rem;
+            text-align: center;
+        }
+
     }
 
     @include tablette-only {
-        align-self: center;
-        width: 40vw;
+        width: 28.5vw;
     }
 
     @include desktop-only {
-        width: 25vw;
+        width: 26vw;
     }
 }
 
@@ -155,11 +184,13 @@
 
     &__btn--pages {
         @include btn-fav;
-        margin-top: 1rem;
+        margin-top: 1.7rem;
         background-color: black;
         font-size: 1.5rem;
-        height: 2rem;
-		width: 2rem;
+        height: 1.8rem;
+        width: 1.8rem;
+        padding-bottom: 0.2rem;
+
 		
         .fa-heart {
             text-align: center;

@@ -1,6 +1,6 @@
 footer {
     
-    @include bord;
+    
     background-color: map-get($background, footer);
     width: 100%;
     padding-top: 0px;
@@ -31,15 +31,20 @@ footer {
         font-size: 10px;
     }
     
-    li {
-        display: flex;
-        font-size: 16px;
-        padding-bottom: 8px;
-        align-self: center;
-    }
+    ul {
+        padding-top: 0.5rem;
+        padding-left: 1.2rem;
+        margin-top: 0px;
 
-    h2 {
-        font-size: 18px;
-        font-weight: 100;
+        li {
+            display: flex;
+            font-size: 16px;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 100;
+        }
     }
 }
