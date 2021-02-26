@@ -371,6 +371,7 @@ footer {
   width: 100%;
   padding-top: 0px;
   padding-bottom: 10px;
+  margin-bottom: 0px;
   color: white;
 }
 footer a {
@@ -574,7 +575,7 @@ footer ul h2 {
 }
 @media (min-width: 1024px) {
   .menu .resto__img {
-    height: 50vh;
+    height: 40vh;
   }
 }
 .menu .carte {
