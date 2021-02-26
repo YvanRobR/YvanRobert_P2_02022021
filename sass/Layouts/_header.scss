@@ -1,56 +1,53 @@
+/*####################################################################################################*/
+/*############################################### HEADER #############################################*/
+/*####################################################################################################*/
+
 /* logo titre*/
 
-header {
-    text-align: center;
-    @include flex-row-reverse;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-   
-    .logo-accueil {
-    @include pos-logo-accueil;
+.header {
+    padding: 1rem 1rem 0.5rem 1rem;
     @include box-shadow-titre;
-    }
+    position: relative;
 
-    .logo-pages {
-        @include pos-logo-pages;
+    &__logo {
+        display: block;
         margin-left: auto;
         margin-right: auto;
+        height: 1.8rem;
     }
 
-    nav {
-        width: 2rem;
-        height: 60px;
-        padding-left: 1rem;
-        color: black;
-        
-        i {
-            display: flex;
-            font-size: 21px;
-            padding-top: 22px;
-            padding-right: 30px;
-            width: 100%;
-            height: 60px;
-            justify-content: flex-start;
-            color: black;
-        }
+    &--retour {
+        position: relative;
+        align-items: center;
     }
-    
-    .localisation {
+
+    &__fleche {
+        position: absolute;
+        top: 35%;
+        left: 1.5rem;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        @include flex-row;
-        background-color: map-get($background, localisation);
-        width: 100%;
-        height: 3rem;
-         
-        &__icone {
-            align-self: center;
-            width: 25px;
-        }
+        color: #000000;
+        font-size: 1.3rem;
+    }
+}
 
-        &__lieu {
-            text-align: center;
-            margin-left: 10px;
-            font-size: 1rem;
-        }
+.localisation {
+    justify-content: center;
+    @include flex-row;
+    background-color: map-get($background, localisation);
+    width: 100%;
+    height: 3rem;
+     
+    &__icone {
+        align-self: center;
+        width: 25px;
+    }
+
+    &__lieu {
+        text-align: center;
+        margin-left: 10px;
+        font-size: 1rem;
     }
 }

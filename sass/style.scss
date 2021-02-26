@@ -14,6 +14,11 @@
 
 
 
+/*####################################################################################################*/
+/*############################################# PAGE INDEX ###########################################*/
+/*####################################################################################################*/
+
+
 /* partie explorer*/
 
 .explore {
@@ -72,30 +77,32 @@
 
 /*cartes affichage restaurants*/
 
-.r1 {
-    @include desktop-only {
-        @include flex-row;
-        @include flex-space-between;
-    }
-}
 
-.r2 {
-    @include desktop-only {
-        @include flex-row;
-        @include flex-space-between;
-    }
-}
 
 .restaurants {
     background-color: map-get($background, restaurants);
     @include flex-column;
     width: 100%;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-bottom: 3.2rem;
-    padding-top: 25px;
+    padding: 2rem 4vw 3.2rem 4vw;
     margin-bottom: 0rem;
     
+    &__haut {
+        
+        @include desktop-only {
+            @include flex-row;
+            @include flex-space-between;
+        }
+    }
+    
+    &__bas {
+        margin-top: 0rem;
+        padding-top: 0rem;
+        
+        @include desktop-only {
+            @include flex-row;
+            @include flex-space-between;
+        }
+    }
     
 
     .resto {
@@ -103,24 +110,26 @@
         @include flex-column;
         @include radius-cartes;
         @include flex-space-between;
+
         box-shadow: 4px 4px 10px 1px rgb(229, 229, 229);
         width: 100%;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
-        height: 27vh;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
+        height: 15rem;
         background-color: $fond-blanc;
         
         @include desktop-only {
             width: 43vw;
         }
-        
 
         a {
             height: 70%;
         }
 
         &__img {
+
             @include radius-images;
+
             height: 100%;
             width: 100%;
         }
@@ -131,7 +140,9 @@
             text-align: center;
             font-size: 0.9rem;
             padding-top: 8px;
+
             @include police-nouveau;
+
             height: 30px;
             width: 90px;
             border-radius: 2px;
@@ -148,7 +159,6 @@
 
         &__bas {
             @include flex-row;
-            /*padding-right: 10px;*/
             margin-top: 0rem;
             margin-bottom: 1rem;
 
@@ -175,8 +185,13 @@
             margin: 0rem;
         }
     }
-
 }
+
+
+
+/*####################################################################################################*/
+/*########################################## PAGES RESTAURANTS #######################################*/
+/*####################################################################################################*/
 
 
 
