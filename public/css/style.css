@@ -5,6 +5,7 @@
 /* box shadow */
 /* boutons */
 /* autres*/
+/* loader page index */
 img {
   object-fit: cover;
 }
@@ -315,6 +316,21 @@ footer ul h2 {
     opacity: 1;
   }
 }
+/*############### loader page index #############*/
+@keyframes animLoader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*####################################################################################################*/
 /*############################################### HEADER #############################################*/
 /*####################################################################################################*/
@@ -412,6 +428,58 @@ footer ul h2 {
 /*####################################################################################################*/
 /*############################################# PAGE INDEX ###########################################*/
 /*####################################################################################################*/
+/* loader spinner  */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #222222;
+  animation: animLoader 0.5s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+#loader-wrapper #loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 5px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  z-index: 1001;
+}
+#loader-wrapper #loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 5px solid transparent;
+  border-top-color: #FF79DA;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+#loader-wrapper #loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 5px solid transparent;
+  border-top-color: #99E2D0;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
 /* partie explorer*/
 .explore {
   background-color: #f6f6f6;
