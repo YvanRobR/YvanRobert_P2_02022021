@@ -40,7 +40,6 @@ footer ul h2 {
 
 .menu h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 30px;
   font-weight: lighter;
 }
 .menu h2 {
@@ -257,7 +256,7 @@ footer ul h2 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-top: 1.7rem;
+  margin-top: 1.2rem;
   background-color: black;
   font-size: 1.5rem;
   height: 1.8rem;
@@ -681,7 +680,7 @@ footer ul h2 {
 }
 .menu .carte__haut h1 {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-left: 0.6rem;
 }
 .menu .carte__entrees .souligne {
