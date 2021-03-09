@@ -508,6 +508,9 @@ footer ul h2 {
   padding-top: 20px;
   padding-bottom: 45px;
 }
+.fonctionnement h2 {
+  margin-left: -0.8rem;
+}
 @media (min-width: 768px) {
   .fonctionnement {
     display: flex;
@@ -517,6 +520,7 @@ footer ul h2 {
     padding-left: 4vw;
   }
   .fonctionnement h2 {
+    margin-left: 0;
     width: 100%;
   }
 }
@@ -568,6 +572,8 @@ footer ul h2 {
   width: 100%;
   margin-top: 0;
   margin-bottom: 1.2rem;
+  margin-left: 0;
+  margin-right: 0;
   height: 15rem;
   background-color: #ffffff;
 }
