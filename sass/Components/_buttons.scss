@@ -137,6 +137,8 @@
 /* coeur favoris page accueil*/
 
 .resto {
+    margin-top: 0;
+    
     &__btn--index {
         @include btn-fav;
             
