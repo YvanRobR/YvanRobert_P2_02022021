@@ -36,7 +36,8 @@ margin-left: auto;
 @mixin barre-souligne {
     height: 0.2rem;
     width: 40px;
-    margin-top: 0.3rem;
+    margin-top: -10px;
+    margin-left: 0.5rem;
     background-color: $couleur-tertiaire;
 }
 

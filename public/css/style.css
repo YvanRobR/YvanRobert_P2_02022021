@@ -686,7 +686,8 @@ footer ul h2 {
 .menu .carte__entrees .souligne {
   height: 0.2rem;
   width: 40px;
-  margin-top: 0.3rem;
+  margin-top: -10px;
+  margin-left: 0.5rem;
   background-color: #99E2D0;
 }
 .menu .carte__plats {
@@ -695,7 +696,8 @@ footer ul h2 {
 .menu .carte__plats .souligne {
   height: 0.2rem;
   width: 40px;
-  margin-top: 0.3rem;
+  margin-top: -10px;
+  margin-left: 0.5rem;
   background-color: #99E2D0;
 }
 @media (min-width: 1024px) {
@@ -709,7 +711,8 @@ footer ul h2 {
 .menu .carte__desserts .souligne {
   height: 0.2rem;
   width: 40px;
-  margin-top: 0.3rem;
+  margin-top: -10px;
+  margin-left: 0.5rem;
   background-color: #99E2D0;
 }
 @media (min-width: 1024px) {
@@ -799,28 +802,31 @@ footer ul h2 {
   animation-delay: 0s;
 }
 .menu .carte .delay-1 {
-  animation-delay: 0.1s;
+  animation-delay: 0.0833333333s;
 }
 .menu .carte .delay-2 {
-  animation-delay: 0.2s;
+  animation-delay: 0.1666666667s;
 }
 .menu .carte .delay-3 {
-  animation-delay: 0.3s;
+  animation-delay: 0.25s;
 }
 .menu .carte .delay-4 {
-  animation-delay: 0.4s;
+  animation-delay: 0.3333333333s;
 }
 .menu .carte .delay-5 {
-  animation-delay: 0.5s;
+  animation-delay: 0.4166666667s;
 }
 .menu .carte .delay-6 {
-  animation-delay: 0.6s;
+  animation-delay: 0.5s;
 }
 .menu .carte .delay-7 {
-  animation-delay: 0.7s;
+  animation-delay: 0.5833333333s;
 }
 .menu .carte .delay-8 {
-  animation-delay: 0.8s;
+  animation-delay: 0.6666666667s;
+}
+.menu .carte .delay-9 {
+  animation-delay: 0.75s;
 }
 
 /*# sourceMappingURL=style.css.map */
